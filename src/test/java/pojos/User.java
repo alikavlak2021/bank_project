@@ -15,6 +15,7 @@ public class User {
     private String password;
     private String resetDate;
     private String ssn;
+    private String ssn2;
     public String getAddress() {
         return address;
     }
