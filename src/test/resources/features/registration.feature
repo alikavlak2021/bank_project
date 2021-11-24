@@ -21,6 +21,7 @@
       Then verify the success message
 
 
+
       Examples:
           | SSN         | firstname | lastname | address  | phonenumber | username | email             | newpassword | newpassword2 |
           | 256-45-6329 | faik      | ali      | istanbul | 9515555495  | faik39  | afaikab39@gmail.com   | 34.Faik-    | 34.Faik-     |
