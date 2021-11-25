@@ -9,9 +9,11 @@ public class CustomersPage {
     public CustomersPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
+    @FindBy(xpath = "//*[contains(text(),'Customers')]")
+    public WebElement customersText;
 
     @FindBy(id = "jh-create-entity")
-    public WebElement createANewCustomer;
+    public WebElement createANewCustomerButton;
 
     @FindBy(xpath = "(//tr)[1]")
     public WebElement manageCustomerInfoRow;
@@ -44,8 +46,7 @@ public class CustomersPage {
     public WebElement viewButton;
 
     @FindBy(xpath = "//a[@class='btn btn-primary']")
-    public WebElement customerInfoEditButtonInCustomerPage; // this page opens after i click View button
-
+    public WebElement customerInfoEditButtonInCustomerPage; // this page opens after I click View button, it's a specific customer page
 
     @FindBy(xpath = "//*[contains(text(),'Edit')]")
     public WebElement editButton;
