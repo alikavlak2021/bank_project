@@ -24,5 +24,5 @@ Feature: Create or Edit Account
     Then verify the success message
 
     Examples:
-    |UserName|Password|Description|Balance|
-    |bf_employee1|Magic46.|BugFinder|1500 |
+      |UserName|Password|Description|Balance|
+      |bf_employee1|Magic46.|BugFinder|1500 |

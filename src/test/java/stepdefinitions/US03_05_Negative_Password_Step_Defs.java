@@ -15,7 +15,19 @@ public class US03_05_Negative_Password_Step_Defs {
     Faker faker = new Faker();
 
 
-    @Given("user enters negative Without Capital Char password {string}")
+    And user navigates the Create or Edit Account Page
+    And user enters Description "<Description>"
+    And user enters Balance "<Balance>"
+    And user selects Account Type
+    And user selects Account Status Type
+    And user enters Create Date
+    And user enters Closed Date
+    Then user clicks Save button
+    Then verify the success message
+
+    Examples:
+            |UserName|Password|Description|Balance|
+            |bf_employee1|Magic46.|BugFinder|1500 |  @Given("user enters negative Without Capital Char password {string}")
     public void user_enters_negative_without_capital_char_password(String string) {
       registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutCapitalChar"), Keys.ENTER);
 
