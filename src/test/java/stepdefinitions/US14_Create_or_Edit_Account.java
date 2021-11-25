@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.ReusableMethods;
 
@@ -71,11 +72,15 @@ public class US14_Create_or_Edit_Account {
     }
     @Given("user selects Account Type")
     public void user_selects_account_type() {
-
-    }
+        Select select = new Select(accountPage.accountTypeDropdown);
+        select.selectByIndex(2);
+        accountPage.accountTypeDropdown.click();
+     }
     @Given("user selects Account Status Type")
     public void user_selects_account_status_type() {
-
+        Select select = new Select(accountPage.accountStatusDropdown);
+        select.selectByVisibleText("SUESPENDED");
+        accountPage.accountStatusDropdown.click();
     }
     @Given("user enters Create Date")
     public void user_enters_create_date() {
