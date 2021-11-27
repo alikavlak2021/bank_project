@@ -107,7 +107,7 @@ public class RegistrationStepDef {
 
     @Then("verify the success message")
     public void verify_the_success_message() {
-        System.out.println(registrationPage.successMessage.getText());
+       // System.out.println(registrationPage.successMessage.getText());
         Assert.assertTrue(registrationPage.successMessage.getText().contains("Registration saved"));
 
     }

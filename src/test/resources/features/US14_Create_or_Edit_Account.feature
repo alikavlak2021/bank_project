@@ -20,8 +20,9 @@ Feature: Create or Edit Account
     And user selects Account Status Type
     And user enters Create Date
     And user enters Closed Date
+    And user selects employee
     Then user clicks Save button
-    Then verify the success message
+    Then user verify the accounts page
 
     Examples:
     |UserName|Password|Description|Balance|
