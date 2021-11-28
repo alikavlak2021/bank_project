@@ -1,10 +1,11 @@
-@NewApplicants
+
+@Password_Strength_Test
 Feature: Register new applicants
   Background: Out Of Duty
     Given user is on the main  page
     And user verifies the GMIBANK text
 
-  @Registration_Page_Password_Negative_Test
+  @Registration_Page_Password_Strength_Test
   Scenario Outline: US03_Registration_Page_Password_Negative_Test
     And navigates the registration page
     And user enters SSN "<SSN>" number
@@ -30,24 +31,4 @@ Feature: Register new applicants
       | 256-45-7862 | James     | Prosper  | Dar-Es-Salaam | 9515555495  | jemo     | jemo45@gmail.com | bug-finder01 | bug-finder01 |
 
 
-  @Password_Negative_Test_On_Login_Page
-  Scenario Outline: Login Page Password Negative Test
 
-    When navigates the login page
-    And user enters username on login page "<username>"
-    And user enters password on login page "<password>"
-    And click the signin button
-    Then user verifies the Did you forget your password? link
-    And user clicks on the Did you forget your password? link
-    Then user verifies the Register a new account link
-    And user clicks on the Register a new account link
-    And user close the application
-    Examples: login page negative password test
-      | username     | password   |
-      | customer1    | Customer1* |
-      | bf_customer1 | Customer1  |
-      | customer1    | Customer1  |
-
-      # username is invalid
-      # password is invalid
-      # both of them are invalid

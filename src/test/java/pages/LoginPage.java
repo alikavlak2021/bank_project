@@ -22,14 +22,14 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement loginPasswordAssertion;
 
-    @FindBy(xpath = "//a[@href='/account/reset/request']")
+    @FindBy(xpath= "(//div[@class='alert alert-warning fade show'])[1]")
     public WebElement forgetPassword;
 
-    @FindBy(xpath = "(//a[@href='/account/register'])[2]")
+    @FindBy(xpath = "/html/body/div[2]/div/div[1]/div/div/form/div[2]/div[4]/a")
     public WebElement registerNewAccount;
 
     @FindBy(xpath = "//button[@class='btn btn-primary']")
-    public WebElement signInButton;
+    public WebElement signInButtonTab;
 
 
     @FindBy(xpath = "(//span[text()='Sign in'])[2]")
@@ -38,11 +38,14 @@ public class LoginPage {
     @FindBy(partialLinkText = "My Operations")
     public WebElement myOperations;
 
-    @FindBy(xpath = "//h1")
+    @FindBy(xpath= "//h1")
     public WebElement resetYourPasswordText;
 
     @FindBy(id = "register-title")
     public WebElement registerTitleText;
+
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement userNamePasswordWrongMessage;
 
 
 

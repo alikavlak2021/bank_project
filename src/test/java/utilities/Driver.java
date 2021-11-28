@@ -17,7 +17,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 public class Driver {
     private static int timeout = 5;
-    public static VideoRecord videoRecord;
+//   public static VideoRecord videoRecord;
     //What?=>It is just to create, initialize the driver instance.(Singleton driver)
     //Why?=>We don't want to create and initialize the driver when we don't need
     //We will create and initialize the driver when it is null
@@ -159,8 +159,8 @@ public class Driver {
     public static void startVideoRecording(boolean jenkinsRun) {
         if (!jenkinsRun) {
             try {
-                videoRecord = new VideoRecord();
-                videoRecord.startRecording();
+//                videoRecord = new VideoRecord();
+//              videoRecord.startRecording();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -169,7 +169,7 @@ public class Driver {
     public static void stopVideoRecording(boolean jenkinsRun) {
         if (!jenkinsRun) {
             try {
-                videoRecord.stopRecording();
+//                videoRecord.stopRecording();
             } catch (Exception e) {
                 e.printStackTrace();
             }

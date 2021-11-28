@@ -23,7 +23,8 @@
 
       Examples:
           | SSN         | firstname | lastname | address  | phonenumber | username | email             | newpassword | newpassword2 |
-          | 256-45-6329 | faik      | ali      | istanbul | 9515555495  | faik39  | afaikab39@gmail.com   | 34.Faik-    | 34.Faik-     |
+<<<<<<< HEAD
+          | 356-85-6359 | faik      | ali      | istanbul | 9515555495  | faik911  | afaik712@gmail.com   | 34.Faik-    | 34.Faik-     |
 
 
 
@@ -76,4 +77,6 @@
 #        | SSN         | firstname | lastname | address  | phonenumber | username | email             | newpassword | newpassword2 |
 #        | 256-45-7862 | faik      | ali      | istanbul | 9515555495  | faik39  | faik39@gmail.com   | 34.Faik-    | 34.Faik-     |
 
+
+#      | 256-45-6329 | faik      | ali      | istanbul | 9515555495  | faik39  | afaikab39@gmail.com   | 34.Faik-    | 34.Faik-     |
 

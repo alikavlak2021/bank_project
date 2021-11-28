@@ -10,28 +10,28 @@ public class AdminDefaultPage {
     public AdminDefaultPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
-    @FindBy(xpath = "//.[*='Maria Bruno']")
+    @FindBy(xpath = "//*[.='Maria Bruno']")
     public WebElement adminAccountNameText;
 
-    @FindBy(xpath = "//.[*='Administration']")
+    @FindBy(xpath = "//*[.='Administration']")
     public WebElement administrationDropdown;
 
-    @FindBy(xpath = "//.[*='User Management']")
+    @FindBy(xpath = "//span[.='User management']")
     public WebElement userManagement;
 
-    @FindBy(xpath = "//.[*='Metrics']")
+    @FindBy(xpath = "//*[.='Metrics']")
     public WebElement metrics;
 
-    @FindBy(xpath = "//.[*='Health']")
+    @FindBy(xpath = "//*[.='Health']")
     public WebElement health;
 
-    @FindBy(xpath = "//.[*='Configuration']")
+    @FindBy(xpath = "//*[.='Configuration']")
     public WebElement configuration;
 
-    @FindBy(xpath = "//.[*='Audits']")
+    @FindBy(xpath = "//*[.='Audits']")
     public WebElement audits;
 
-    @FindBy(xpath = "//.[*='Logs']")
+    @FindBy(xpath = "//*[.='Logs']")
     public WebElement logs;
 
     @FindBy(xpath = "//*[contains(text(),'Manage Customers')]")
@@ -39,4 +39,10 @@ public class AdminDefaultPage {
 
     @FindBy(xpath = "//*[contains(text(),'Manage Accounts')]")
     public WebElement adminPageManageAccounts;
+
+    @FindBy (xpath = "//span[.='do not write last']")
+    public WebElement accountMenuDropdown;
+
+    @FindBy (xpath = "//span[.='Sign out']")
+    public WebElement signOutDropdown;
 }
