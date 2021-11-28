@@ -7,9 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.ReusableMethods;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class US14_Create_or_Edit_Account {
@@ -21,15 +19,15 @@ public class US14_Create_or_Edit_Account {
     CreateOrEditAccountPage createOrEditAccountPage = new CreateOrEditAccountPage();
 
 
-    @Given("user navigates the sing in page")
-    public void user_navigates_the_sing_in_page() {
+    @Given("user navigates the sign in page")
+    public void user_navigates_the_sign_in_page() {
         mainPage.signInAndRegistrationTab.click();
         mainPage.signInButton.click();
         ReusableMethods.waitFor(1);
     }
-    @Given("user verifies the sing in page")
-    public void user_verifies_the_sing_in_page() {
-       Assert.assertTrue(loginPage.singInText.isDisplayed());
+    @Given("user verifies the sign in page")
+    public void user_verifies_the_sign_in_page() {
+       Assert.assertTrue(loginPage.signInText.isDisplayed());
 
     }
     @Given("user enters Username {string}")
@@ -42,9 +40,9 @@ public class US14_Create_or_Edit_Account {
 
         loginPage.loginPassword.sendKeys(password);
     }
-    @Given("user enters Sing in button")
-    public void user_enters_sing_in_button() {
-        loginPage.signInButton.click();
+    @Given("user enters Sign in button")
+    public void user_enters_sign_in_button() {
+        loginPage.signInButtonTab.click();
         ReusableMethods.waitFor(2);
     }
     @Given("user navigates the default page")

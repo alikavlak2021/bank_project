@@ -88,5 +88,6 @@ public class DefaultPage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
-
+    @FindBy(xpath = "//span[.='BF Customer1']")
+    public WebElement customerAccountNameText;
 }

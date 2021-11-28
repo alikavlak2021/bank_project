@@ -24,18 +24,16 @@ public class US05_Negative_Password_Step_Defs {
     @When("user enters username on login page {string}")
     public void user_enters_username_on_login_page(String username) {
         loginpage.loginUserName.sendKeys(username);
-
     }
 
     @When("user enters password on login page {string}")
     public void user_enters_password_on_login_page(String password) {
         loginpage.loginPassword.sendKeys(password);
-
     }
 
     @When("click the signin button")
     public void click_the_signin_button() {
-        loginpage.signInButton.click();
+        loginpage.signInButtonTab.click();
     }
 
     @Then("user verifies the Did you forget your password? link")

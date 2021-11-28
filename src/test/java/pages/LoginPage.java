@@ -29,11 +29,10 @@ public class LoginPage {
     public WebElement registerNewAccount;
 
     @FindBy(xpath = "//button[@class='btn btn-primary']")
-    public WebElement signInButton;
-
+    public WebElement signInButtonTab;
 
     @FindBy(xpath = "(//span[text()='Sign in'])[2]")
-    public WebElement singInText;
+    public WebElement signInText;
 
     @FindBy(partialLinkText = "My Operations")
     public WebElement myOperations;
@@ -44,6 +43,8 @@ public class LoginPage {
     @FindBy(id = "register-title")
     public WebElement registerTitleText;
 
+    @FindBy(xpath = "(//button[@type='button'])[5]")
+    public WebElement loginPageCancelButton;
 
 
 
