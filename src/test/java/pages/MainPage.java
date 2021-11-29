@@ -18,6 +18,9 @@ public MainPage(){
     @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
     public WebElement registerButton;
 
+    @FindBy(xpath="(//a[@class='dropdown-item'])[1]")
+    public WebElement userInfoButton;
+
     @FindBy(id = "login-item")
     public WebElement signInButton;
 
