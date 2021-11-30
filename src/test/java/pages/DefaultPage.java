@@ -91,8 +91,7 @@ public class DefaultPage {
     @FindBy(partialLinkText = "My Accounts")
     public WebElement myAccountsDropdown;
 
-    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
-    public WebElement successMessageCreateCustomer;
+
 
 
 }

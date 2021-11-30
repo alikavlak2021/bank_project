@@ -185,5 +185,10 @@ public class ReusableMethods {
         return select.getFirstSelectedOption();
     }
 
+//    public static String getLastEnteredSSN(String lastEnteredSSN) {
+//
+//
+//        return lastEnteredSSN;
+//    }
 
 }

@@ -19,49 +19,49 @@ Feature: create customer address positive with first try
     And click the register button to register with faker
     Then verify the success message
 
-    @assign_employee_role
-    Scenario Outline: assign employee role for this new registrant
+  @assign_employee_role
+  Scenario Outline: assign employee role for this new registrant
 
     Given user is on the main  page
     And user navigates the sing in page
     And user enters Username "<admin_user>"
     And user enters Password "<admin_pw>"
-    And click the signin button
+    And click the signin button to login
     Then verify that user successfully logins to the account
     And user clicks administration then user management
     And user finds the new registrant
     And user assigns employee role to the new registrant
     And user signs out
-      Examples:
-        |admin_user    |admin_pw    |
-        |marcia.leannon|A#Ip6A*06S1Gs&|
-
-#  @login_as_employee
-#  Scenario: login as employee
-#
-#   Given user is on the main  page
-#   And user navigates the sing in page
-#   And user enters Username of new Registrant
-#   And user enters Password of new Registrant
-#   And user enters SSN of new Registrant to search for the customer
-#    And user clicks search button
-#    And user enters middle initial with faker
-#    And user enters phone number with faker
-#    And user enters zip code with faker
-#    And user enters address with faker
-#    And user enters city with faker
-#    And user enters country with faker
-#    And user enters a state from USA with faker
-#    And user clicks on save button on customer_create page
-#    Then verify the success message
+    Examples:
+      |admin_user    |admin_pw    |
+      |marcia.leannon|A#Ip6A*06S1Gs&|
 
 
+  @customer_creation_byEmployee
+  Scenario Outline:
+    Given user is on the main  page
+    And user verifies the GMIBANK text
+    And user navigates the sing in page
+    And user verifies the sing in page
+    And user enters Username "<employee_user>"
+    And user enters Password "<employee_pw>"
+    And user enters Sing in button
+    Then verify that user successfully logins to the account
+    And user clicks the My Operations
+    And user clicks Manage Customers
+    And user clicks Create a new Customer
+    And user enters "SSN" number of new registrant to search for the customer
+    And user clicks search button
 
-
-
-
-
-
-
-
-
+    And user enters middle initial with faker
+    And user enters phone number with faker
+    And user enters zip code with faker
+    And user enters address with faker
+    And user enters city with faker
+    And user enters country as USA
+    And user enters a state from USA with faker
+    And user clicks on save button on customer_create page
+    Then verify the success message on customer creation page
+    Examples:
+      |employee_user | employee_pw |
+      |bf_employee1  |Magic46.     |
