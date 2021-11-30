@@ -54,6 +54,11 @@ public class CustomersPage {
     @FindBy(xpath = "//*[contains(text(),'Delete')]")
     public WebElement deleteButton;
 
+    @FindBy(xpath = "//*[contains(text(),'Confirm delete operation')]")
+    public WebElement confirmDeleteOperationMessage;
+
+
+
 
 
 
