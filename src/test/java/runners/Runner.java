@@ -19,7 +19,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@registerNewUserUI",
+        tags = "@register_with_java_faker",
 
         dryRun = false
 )

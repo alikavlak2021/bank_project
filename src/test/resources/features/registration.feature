@@ -23,7 +23,6 @@
 
       Examples:
           | SSN         | firstname | lastname | address  | phonenumber | username | email             | newpassword | newpassword2 |
-<<<<<<< HEAD
           | 356-85-6359 | faik      | ali      | istanbul | 9515555495  | faik911  | afaik712@gmail.com   | 34.Faik-    | 34.Faik-     |
 
 
