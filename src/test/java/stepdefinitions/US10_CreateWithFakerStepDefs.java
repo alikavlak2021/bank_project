@@ -157,6 +157,26 @@ public class US10_CreateWithFakerStepDefs {
     public void user_enters_zip_code_with_faker() {
         editCustomerPage.zipCodeField.sendKeys(faker.number().digits(5));
     }
+
+    @Then("user clears address field")
+    public void user_clears_address() {
+        editCustomerPage.addressField.clear();
+    }
+
+    @Then("user clears city field")
+    public void user_clears_city() {
+        editCustomerPage.cityField.clear();
+    }
+
+    @Then("user clears country field")
+    public void user_clears_country() {
+        editCustomerPage.countryDropdownField.clear();
+    }
+
+    @Then("user clears state field")
+    public void user_clears_state() {
+        editCustomerPage.stateField.clear();
+    }
     @Then("user enters city with faker")
     public void user_enters_city_with_faker() {
         editCustomerPage.cityField.sendKeys(faker.address().cityName());
@@ -180,6 +200,38 @@ public class US10_CreateWithFakerStepDefs {
         String successMessageCreateCustomer = editCustomerPage.translationNotFound.getText();
         Assert.assertTrue(successMessageCreateCustomer.contains("translation-not-found"));
     }
+    @Then("verify the error message for address field")
+    public void verify_error_message_for_address() {
+        ReusableMethods.waitFor(1);
+     //   Assert.assertTrue(editCustomerPage.translationNotFound.getText().contains("translation-not-found"));
+        // locate the element then make the assertion
+    }
+    @Then("verify the error message for city field")
+    public void verify_error_message_for_city() {
+        ReusableMethods.waitFor(1);
+        //   Assert.assertTrue(editCustomerPage.translationNotFound.getText().contains("translation-not-found"));
+        // locate the element then make the assertion
+    }
+
+    @Then("verify the error message for country field")
+    public void verify_error_message_for_country() {
+        ReusableMethods.waitFor(1);
+        //   Assert.assertTrue(editCustomerPage.translationNotFound.getText().contains("translation-not-found"));
+        // locate the element then make the assertion
+    }
+    @Then("verify the error message for state field")
+    public void verify_error_message_for_state() {
+        ReusableMethods.waitFor(1);
+        //   Assert.assertTrue(editCustomerPage.translationNotFound.getText().contains("translation-not-found"));
+        // locate the element then make the assertion
+    }
+
+
+
+
+
+
+
     @Then("verify the success message on customer creation page")
     public void verify_the_success_message_on_customer_creation_page() {
         ReusableMethods.waitFor(1);
