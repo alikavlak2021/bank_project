@@ -20,7 +20,6 @@ import utilities.Driver;
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@TC01_address_is_blank",
-
         dryRun = false
 )
 public class Runner {

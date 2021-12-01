@@ -11,26 +11,24 @@ Scenario Outline: username is invalid
 
   And user enters username on login page "<username>"
   And user enters password on login page "<password>"
-  And click the signin button
+  And click the sign in button
   And user close the application
+   # username is invalid
 Examples: login page negative password test
   | username     | password   |
   | customer1    | Customer1* |
-
-      # username is invalid
 
 @password_Is_Invalid_Test_On_Login_Page
 Scenario Outline: password is invalid
 
   And user enters username on login page "<username>"
   And user enters password on login page "<password>"
-  And click the signin button
+  And click the sign in button
   And user close the application
+  # password is invalid
 Examples: login page negative password test
   | username     | password  |
   | bf_customer1 | Customer1 |
-
-      # password is invalid
 
 @username_password_Are_Invalid_Test_On_Login_Page
 Scenario Outline: both of them are invalid
@@ -38,13 +36,12 @@ Scenario Outline: both of them are invalid
 
   And user enters username on login page "<username>"
   And user enters password on login page "<password>"
-  And click the signin button
+  And click the sign in button
   And user close the application
+  # both of them are invalid
 Examples: login page negative password test
   | username  | password  |
   | customer1 | Customer1 |
-
-   # both of them are invalid
 
   @password_reset
   Scenario Outline: password reset
@@ -75,9 +72,9 @@ Examples: login page negative password test
 
     And user enters username on login page "<username>"
     And user enters password on login page "<password>"
-    And click the signin button
+    And click the sign in button
     And user close the application
-
+        #Both are valid
     Examples: login page negative password test
       | username  | password  |
       | bf_customer1 | Customer1* |
