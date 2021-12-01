@@ -10,8 +10,17 @@ public class EditCustomerPage {
     public EditCustomerPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
+
     @FindBy(xpath = "//*[contains(text(),'Create or edit a Customer')]")
     public WebElement createOrEditACustomerText;
+
+    //ssn1  yeni eklendi
+    @FindBy(xpath = "//input[@id='search-ssn']")
+    public WebElement ssn1;
+
+    //search button yeni eklendi
+    @FindBy(xpath = "//*[contains(text(),'Search')]")
+    public WebElement searchButton;
 
     @FindBy(id = "tp-customer-firstName")
     public WebElement editCustomerFirstName;

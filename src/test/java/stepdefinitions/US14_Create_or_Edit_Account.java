@@ -26,10 +26,12 @@ public class US14_Create_or_Edit_Account {
     }
     @Given("user enters Username {string}")
     public void user_enters_username(String userName) {
+
         loginPage.loginUserName.sendKeys(userName);
     }
     @Given("user enters Password {string}")
     public void user_enters_password(String password) {
+
         loginPage.loginPassword.sendKeys(password);
     }
     @Given("user enters Sing in button")
@@ -43,18 +45,22 @@ public class US14_Create_or_Edit_Account {
     }
     @Given("user clicks the My Operations")
     public void user_clicks_the_my_operations() {
+
         defaultPage.myOperationsDropdown.click();
     }
     @Given("user clicks the Manage Accounts")
     public void user_clicks_the_my_accounts() {
+
         defaultPage.manageAccounts.click();
     }
     @Given("user navigates the account page")
     public void user_navigates_the_account_page() {
+
         Assert.assertTrue(accountPage.accountsText.isDisplayed());
     }
     @Given("user clicks Create a new Account button")
     public void user_clicks_create_a_new_account_button() {
+
         accountPage.createNewAccountLink.click();
     }
     @Given("user navigates the Create or Edit Account Page")
@@ -67,6 +73,7 @@ public class US14_Create_or_Edit_Account {
     }
     @Given("user enters Balance {string}")
     public void user_enters_balance(String account) {
+
         createOrEditAccountPage.accountBox.sendKeys(account);
     }
     @Given("user selects Account Type")
