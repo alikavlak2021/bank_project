@@ -1,33 +1,43 @@
 @registerNewUserUI002
 Feature: Registration_negative
 
+ Background: Register page negative scenerio
+
+  Given user is on the main page
+  And user navigates the registration page
+
     @Negative_registrationPage
-   Scenario Outline: Register new users for GMI Bank
- Given user is on the main  page
- And user verifies the GMIBANK text
- And navigates the registration page
- And user enters a short SSN "<SSN>" number
- And verify the short SSN message
- And user enter char character "<SSN>"
- And user enters long SSN "<SSN>" number
- And user enters firstname "<firstname>"
- And user enters lastname "<lastname>"
- And user enters address "<address>"
- And user enters phonenumber "<phonenumber>"
- And user enter char character "<phonenumber>"
- And user verify invalid attempt
- And user enters username "<username>"
- And user left blank "<username>"
- And user verify invalid attempt
- And user enters email "<email>"
- And user enter email without @ sign "<email>"
- And user verify invalid attempt
- And user enter email without . extensions "<SSN>"
- And user verify invalid attempt
- And user enters new password "<newpassword>"
- And user enters new password "<newpassword2>"
- And click the registration button
- And verify the success message
+   Scenario Outline: Negative registration
+
+ And user enters a "<shortSSN>" number
+ And user see the invalid short SSN message
+ And user verify the short SSN invalid message
+ And user enter "<charSSN>"
+ And user see the invalid char SSN message
+ And user verify the "<invalidSSN>" invalid message
+ And user enters "<longSSN>" number
+ And user see the invalid long SSN message
+ And user verify the long SSN invalid message
+ And user left it "<blankSSN>" Text box
+ And user see the blank invalid SSN message
+ And user verify the blank invalid SSN message
+ And user left it "<blankFirstName>"
+ And user see the  blank invalid first name message
+ And user verify the invalid first name message
+ And user enters "<invalidLastname>"
+ And user see the invalid last name message
+ And user verify the last name invalid message
+ And user enter "<invalid address>"
+ And user see the invalid address message
+ And user verify the invalid address message
+ And user enter "<invalid phone number>"
+ And user see the invalid phone number message
+ And user enter invalid char phone number
+ And user enters "<invalid email>"
+ And user see the invalid email message
+
+
 
   Examples:
-    | SSN         | firstname | lastname | address       | phonenumber | username | email       | newpassword  | newpassword2 |
+    |     shortSSN    |  charSSN| invalidSSN |    longSSN  | blankSSN |blankFirstName | invalidLastname      | invalid address|  invalid phone number|invalid email|
+    |                 |         |            |             |           |              |                      |                |                      |             |
