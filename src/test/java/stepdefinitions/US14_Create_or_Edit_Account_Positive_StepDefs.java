@@ -86,6 +86,17 @@ public class US14_Create_or_Edit_Account_Positive_StepDefs {
     }
     @Given("user selects Account Type")
     public void user_selects_account_type() {
+<<<<<<< HEAD:src/test/java/stepdefinitions/US14_Create_or_Edit_Account.java
+        Select select = new Select(accountPage.accountTypeDropdown);
+        select.selectByIndex(2);
+        accountPage.accountTypeDropdown.click();
+     }
+    @Given("user selects Account Status Type")
+    public void user_selects_account_status_type() {
+        Select select = new Select(accountPage.accountStatusDropdown);
+        select.selectByVisibleText("SUESPENDED");
+        accountPage.accountStatusDropdown.click();
+=======
         createOrEditAccountPage.accountTypeDropDown.click();
         Select select = new Select(createOrEditAccountPage.accountTypeDropDown);
         select.selectByValue("SAVING");
@@ -96,6 +107,7 @@ public class US14_Create_or_Edit_Account_Positive_StepDefs {
         createOrEditAccountPage.accountStatusTypeDropDown.click();
         Select select = new Select(createOrEditAccountPage.accountStatusTypeDropDown);
         select.selectByValue("ACTIVE");
+>>>>>>> master:src/test/java/stepdefinitions/US14_Create_or_Edit_Account_Positive_StepDefs.java
     }
     @Given("user enters Create Date")
     public void user_enters_create_date() {
