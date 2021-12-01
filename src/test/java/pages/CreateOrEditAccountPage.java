@@ -36,4 +36,12 @@ public class CreateOrEditAccountPage {
 
     @FindBy(id = "save-entity")
     public WebElement saveButton;
+
+    @FindBy(xpath = "(//div[text()='This field is required.'])[1]")
+    public WebElement descriptionText;
+
+    @FindBy(xpath = "(//div[text()='This field is required.'])[2]")
+    public WebElement balanceText;
+
+
 }

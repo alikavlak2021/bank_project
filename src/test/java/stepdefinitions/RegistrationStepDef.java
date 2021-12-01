@@ -46,8 +46,8 @@ public class RegistrationStepDef {
 
     @Given("user enters SSN {string} number")
     public void user_enters_ssn_number(String SSN) {
-
-        registrationPage.ssn.sendKeys(faker.number().digits(9));
+        String SSN_Number = faker.number().digits(9);
+        registrationPage.ssn.sendKeys(SSN_Number);
         registrant.setSsn(SSN);
     }
 
@@ -101,13 +101,13 @@ public class RegistrationStepDef {
     @Given("click the register button")
     public void click_the_register_button() {
         registrationPage.registerButton2.click();
-        ReusableMethods.waitFor(1);
         WriteToTxt.saveRegistrantData(path, registrant);
     }
 
     @Then("verify the success message")
     public void verify_the_success_message() {
        // System.out.println(registrationPage.successMessage.getText());
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(registrationPage.successMessage.getText().contains("Registration saved"));
 
     }

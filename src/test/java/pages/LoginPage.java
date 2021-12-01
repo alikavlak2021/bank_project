@@ -47,6 +47,9 @@ public class LoginPage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement userNamePasswordWrongMessage;
 
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement signInButton;
+
 
 
 

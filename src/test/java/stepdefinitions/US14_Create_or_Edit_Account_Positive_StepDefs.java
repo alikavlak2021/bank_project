@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class US14_Create_or_Edit_Account {
+public class US14_Create_or_Edit_Account_Positive_StepDefs {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();
@@ -103,6 +103,7 @@ public class US14_Create_or_Edit_Account {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
         String text = formatter.format(dateTime);
         createOrEditAccountPage.createDateBox.sendKeys(text);
+        Assert.assertFalse(createOrEditAccountPage.createDateBox.getText().equals(text));
 
     }
     @Given("user enters Closed Date")
@@ -111,6 +112,7 @@ public class US14_Create_or_Edit_Account {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
         String text = formatter.format(dateTime.plusYears(2));
         createOrEditAccountPage.closedDateBox.sendKeys(text);
+        Assert.assertFalse(createOrEditAccountPage.closedDateBox.getText().equals(text));
     }
     @Given("user selects employee")
     public void user_selects_employee() {
@@ -118,7 +120,7 @@ public class US14_Create_or_Edit_Account {
        Select select = new Select(createOrEditAccountPage.employeeBox);
        select.selectByIndex(0);
        String employee= createOrEditAccountPage.employeeBox.getAttribute("value");
-       Assert.assertFalse(employee.isEmpty());
+       Assert.assertTrue(employee.isEmpty());
     }
     @Then("user clicks Save button")
     public void user_clicks_save_button() {
@@ -127,6 +129,7 @@ public class US14_Create_or_Edit_Account {
     }
     @Then("user verify the accounts page")
     public void user_verify_the_success_message() {
+
         Assert.assertTrue(accountPage.accountsText.isDisplayed());
     }
 
