@@ -18,8 +18,8 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@Negative_registrationPage",
-        dryRun = true
+        tags = "@Password_Strength_Test",
+        dryRun = false
 
 )
 public class Runner {
