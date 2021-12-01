@@ -19,8 +19,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@register_with_java_faker",
-
+        tags = "@Password_Strength_Test",
         dryRun = false
 )
 public class Runner {
