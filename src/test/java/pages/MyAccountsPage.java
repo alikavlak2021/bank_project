@@ -21,7 +21,6 @@ public class MyAccountsPage {
     //table/tbody/tr[1]/td[4]  ==> viewTransaction için table xpath ile
 
 
-
     @FindBy(xpath = "(//table)[2]/thead/tr/th[3]")
     public WebElement description;
 
