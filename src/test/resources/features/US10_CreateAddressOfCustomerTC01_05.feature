@@ -37,35 +37,36 @@ Feature: Address of customer can be created from the very beginning
 #      |marcia.leannon|A#Ip6A*06S1Gs&|
 
 
-  @TC01_address_is_blank
+
     Background:
-    Scenario Outline: Address as street and number should be provided  and cannot be left blank
     Given user is on the main  page
     And user verifies the GMIBANK text
     And user navigates the sing in page
     And user verifies the sing in page
-    And user enters Username "<employee_user>"
-    And user enters Password "<employee_pw>"
+    And user enters Username "bf_employee1"
+    And user enters Password "Magic46."
     And user enters Sing in button
     Then verify that user successfully logins to the account
     And user clicks the My Operations
     And user clicks Manage Customers
     And user clicks Create a new Customer
-    And user enters "<SSN>" number of new registrant to search for the customer
+    And user enters "530-21-2868" number of new registrant to search for the customer
     And user clicks search button
     And user enters middle initial with faker
     And user enters phone number with faker
     And user enters zip code with faker
 
+  @TC01_address_is_blank
+    Scenario: Address as street and number should be provided  and cannot be left blank
     And user clears address field
     And user enters city with faker
     And user enters country as USA
     And user enters a state from USA with faker
     And user clicks on save button on customer_create page
     Then verify the error message for address field
-    Examples:
-      |employee_user | employee_pw | SSN |
-      |bf_employee1  |Magic46.     |530-21-2868|
+#    Examples:
+#      |employee_user | employee_pw | SSN |
+#      |bf_employee1  |Magic46.     |530-21-2868|
 
   @TC02_city_is_blank
   Scenario: City should be provided  and cannot be left blank
@@ -104,7 +105,7 @@ Feature: Address of customer can be created from the very beginning
     Then verify the success message on customer creation page
 
   @TC06_address_creation_with_used_ssn
-  Scenario Outline: Address of customer can be created with valid data
+  Scenario: Address of customer can be created with valid data
     And user enters address with faker
     And user enters city with faker
     And user enters country as USA
@@ -112,32 +113,30 @@ Feature: Address of customer can be created from the very beginning
     And user clicks on save button on customer_create page
     Then verify the success message on customer creation page
 
-
-
-  Scenario Outline:
-    Given user is on the main  page
-    And user verifies the GMIBANK text
-    And user navigates the sing in page
-    And user verifies the sing in page
-    And user enters Username "<employee_user>"
-    And user enters Password "<employee_pw>"
-    And user enters Sing in button
-    Then verify that user successfully logins to the account
-    And user clicks the My Operations
-    And user clicks Manage Customers
-    And user clicks Create a new Customer
-    And user enters "<SSN>" number of new registrant to search for the customer
-    And user clicks search button
-
-    And user enters middle initial with faker
-    And user enters phone number with faker
-    And user enters zip code with faker
-    And user enters address with faker
-    And user enters city with faker
-    And user enters country as USA
-    And user enters a state from USA with faker
-    And user clicks on save button on customer_create page
-    Then verify the success message on customer creation page
-    Examples:
-      |employee_user | employee_pw | SSN |
-      |bf_employee1  |Magic46.     |530-21-2868     |
+#  Scenario Outline:
+#    Given user is on the main  page
+#    And user verifies the GMIBANK text
+#    And user navigates the sing in page
+#    And user verifies the sing in page
+#    And user enters Username "<employee_user>"
+#    And user enters Password "<employee_pw>"
+#    And user enters Sing in button
+#    Then verify that user successfully logins to the account
+#    And user clicks the My Operations
+#    And user clicks Manage Customers
+#    And user clicks Create a new Customer
+#    And user enters "<SSN>" number of new registrant to search for the customer
+#    And user clicks search button
+#
+#    And user enters middle initial with faker
+#    And user enters phone number with faker
+#    And user enters zip code with faker
+#    And user enters address with faker
+#    And user enters city with faker
+#    And user enters country as USA
+#    And user enters a state from USA with faker
+#    And user clicks on save button on customer_create page
+#    Then verify the success message on customer creation page
+#    Examples:
+#      |employee_user | employee_pw | SSN |
+#      |bf_employee1  |Magic46.     |530-21-2868     |

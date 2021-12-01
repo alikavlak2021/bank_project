@@ -17,7 +17,7 @@ public class us15_ManageAccountsStepDefs {
     @Then("user clicks on My Accounts")
     public void user_clicks_on_my_accounts() {
         defaultPage.myOperationsDropdown.click();
-        myAccountsPage.myAccountsDropdown.click();
+        defaultPage.myAccountsDropdown.click();
     }
     @Then("verify that all account types are displayed")
     public void verify_that_all_account_types_are_displayed() {

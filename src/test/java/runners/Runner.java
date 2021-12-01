@@ -19,7 +19,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@register_with_java_faker",
+        tags = "@TC01_address_is_blank",
 
         dryRun = false
 )
