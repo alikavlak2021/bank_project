@@ -9,26 +9,32 @@ import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.ReusableMethods;
 
-public class US11_DataCrationOnTimeOfCustomerCreation {
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
+public class US11_DataCreationOnTimeOfCustomerCreation_positive {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();
     CustomersPage customersPage = new CustomersPage();
     EditCustomerPage editCustomerPage = new EditCustomerPage();
 
-    @Given("user clicks the Manage Customers")
-    public void user_clicks_the_manage_customers() {
-        defaultPage.manageCustomers.click();
-        ReusableMethods.waitFor(1);
-    }
+//    @Given("user clicks the Manage Customers")
+//    public void user_clicks_the_manage_customers() {
+//        defaultPage.manageCustomers.click();
+//        ReusableMethods.waitFor(1);
+//    }
     @Given("user navigates the Customers Page")
     public void user_navigates_the_customers_page() {
-        Assert.assertTrue(customersPage.createANewCustomer.isDisplayed());
+        Assert.assertTrue(customersPage.createANewCustomerButton.isDisplayed());
     }
-    @Given("user clicks Create a new Customer")
-    public void user_clicks_create_a_new_customer() {
-        customersPage.createANewCustomer.click();
-    }
+//    @Given("user clicks Create a new Customer")
+//    public void user_clicks_create_a_new_customer() {
+//        customersPage.createANewCustomerButton.click();
+//    }
+
     @Given("user verifies the Create or edit a Customer text")
     public void user_verifies_the_create_or_edit_a_customer_text() {
         Assert.assertTrue(editCustomerPage.createOrEditACustomerText.isDisplayed());
@@ -39,28 +45,41 @@ public class US11_DataCrationOnTimeOfCustomerCreation {
     }
     @Given("user enters an email {string}")
     public void user_enters_an_email(String email) {
-       editCustomerPage.editCustomerEmail.sendKeys(email);
+
+        editCustomerPage.editCustomerEmail.sendKeys(email);
     }
     @Given("user enters mobile phone number {string}")
     public void user_enters_mobile_phone_number(String MobilePhoneNumber) {
         editCustomerPage.editCustomerMobilePhoneNumber.sendKeys(MobilePhoneNumber);
     }
-    @Given("user enters phone number {string}")
-    public void user_enters_phone_number(String PhoneNumber) {
-        editCustomerPage.editCustomerPhoneNumber.sendKeys(PhoneNumber);
-    }
-    @Given("user enters zip code {string}")
-    public void user_enters_zip_code(String ZipCode) {
-        editCustomerPage.editCustomerZipCode.sendKeys(ZipCode);
-    }
-    @Given("user enters city {string}")
-    public void user_enters_city(String City) {
-        editCustomerPage.editCustomerCity.sendKeys(City);
-    }
+
+//    @Given("user enters phone number {string}")
+//    public void user_enters_phone_number(String PhoneNumber) {
+//        editCustomerPage.editCustomerPhoneNumber.sendKeys(PhoneNumber);
+//    }
+//    @Given("user enters zip code {string}")
+//    public void user_enters_zip_code(String ZipCode) {
+//        editCustomerPage.editCustomerZipCode.sendKeys(ZipCode);
+//    }
+//    @Given("user enters city {string}")
+//    public void user_enters_city(String City) {
+//        editCustomerPage.editCustomerCity.sendKeys(City);
+//    }
+
     @Given("user enters ssn number {string}")
     public void user_enters_ssn_number(String Ssn) {
         editCustomerPage.editCustomerSsn.sendKeys(Ssn);
 
+    }
+    @Given("user enters Customer Create Date")
+    public void user_enters_customer_create_date() {
+       Date date = new Date();
+       SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+       String formattedDate = sdf.format(date);
+//      LocalDateTime localDateTime =  LocalDateTime.now();
+//      DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
+//      String localDateText = dateTimeFormatter.format(localDateTime);
+        editCustomerPage.editCustomerCreateDate.sendKeys(formattedDate);
     }
     @Given("user clicks the Country dropbox")
     public void user_clicks_the_country_dropbox() {
@@ -71,8 +90,8 @@ public class US11_DataCrationOnTimeOfCustomerCreation {
         Select select = new Select(editCustomerPage.editCustomerCountry);
         select.selectByVisibleText("USA");
     }
-    @Given("user enters state {string}")
-    public void user_enters_state(String state) {
+    @Given("user enters customer state {string}")
+    public void user_enters_customer_state(String state) {
         editCustomerPage.editCustomerState.sendKeys(state);
     }
     @Given("user clicks User dropbox")
@@ -91,6 +110,7 @@ public class US11_DataCrationOnTimeOfCustomerCreation {
     @Given("user select test account from options")
     public void user_select_test_account_from_options() {
         editCustomerPage.testAccountOptionFromAccountDropdown.click();
+        Assert.assertTrue(editCustomerPage.testAccountOptionFromAccountDropdown.isDisplayed());
     }
     @Given("user click the zelle enrolled")
     public void user_click_the_zelle_enrolled() {

@@ -10,9 +10,11 @@ public class CustomersPage {
     public CustomersPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
+    @FindBy(xpath = "//*[contains(text(),'Customers')]")
+    public WebElement customersText;
 
     @FindBy(id = "jh-create-entity")
-    public WebElement createANewCustomer;
+    public WebElement createANewCustomerButton;
 
     @FindBy(xpath = "(//tr)[1]")
     public WebElement manageCustomerInfoRow;
@@ -52,6 +54,11 @@ public class CustomersPage {
 
     @FindBy(xpath = "//*[contains(text(),'Delete')]")
     public WebElement deleteButton;
+
+    @FindBy(xpath = "//*[contains(text(),'Confirm delete operation')]")
+    public WebElement confirmDeleteOperationMessage;
+
+
 
 
 

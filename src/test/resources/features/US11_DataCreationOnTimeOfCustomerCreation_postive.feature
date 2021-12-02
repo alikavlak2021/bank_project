@@ -1,4 +1,4 @@
-@us11CustomerAccount
+@us11CustomerAccount_positive
 Feature: Data Creation On Time Of Customer Creation
 
 
@@ -29,10 +29,10 @@ Feature: Data Creation On Time Of Customer Creation
     And user enters address "<Address>"
     And user enters city "<City>"
     And user enters ssn number "<Ssn>"
-    And user enters Create Date
+    And user enters Customer Create Date
     And user clicks the Country dropbox
     And user select USA
-    And user enters state "<State>"
+    And user enters customer state "<State>"
     And user clicks User dropbox
     And user selects cup-tan cup ay
     And user clicks account box
@@ -41,6 +41,6 @@ Feature: Data Creation On Time Of Customer Creation
     When user clicks Save button
     Then user verifies the success message
     Examples:
-      |UserName     |Password|FirstName|LastName|MiddleInitial|Email              |MobilePhoneNumber|PhoneNumber |ZipCode|Address|City  |Ssn        |
-      |bf_employee1 |Magic46.|Bug-Bug  |Bugov   |Bugiii       |bugi@gmail.com     |222-333-5555     |123-789-4444|787    |Bug77  |Boston|111-22-2235|
+      |UserName     |Password|FirstName|LastName|MiddleInitial|Email              |MobilePhoneNumber|PhoneNumber |ZipCode|Address|City  |Ssn        |State |
+      |bf_employee1 |Magic46.|Bug-Bug  |Bugov   |Bugiii       |bugi@gmail.com     |222-333-5555     |123-789-4444|787    |Bug77  |Boston|111-22-2235|Boston|
 
