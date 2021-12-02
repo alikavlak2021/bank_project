@@ -13,6 +13,7 @@ public class EditCustomerPage {
     @FindBy(xpath = "//*[contains(text(),'Create or edit a Customer')]")
     public WebElement createOrEditACustomerText;
 
+
     @FindBy(id = "tp-customer-firstName")
     public WebElement editCustomerFirstName;
 
@@ -28,8 +29,14 @@ public class EditCustomerPage {
     @FindBy(id = "tp-customer-mobilePhoneNumber")
     public WebElement editCustomerMobilePhoneNumber;
 
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement invalidMobilePhoneNumber;
+
     @FindBy(id = "tp-customer-phoneNumber")
     public WebElement editCustomerPhoneNumber;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement invalidPhoneNumber;
 
     @FindBy(id = "tp-customer-zipCode")
     public WebElement editCustomerZipCode;
@@ -42,6 +49,9 @@ public class EditCustomerPage {
 
     @FindBy(id = "tp-customer-ssn")
     public WebElement editCustomerSsn;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[3]")
+    public WebElement invalidSsn;
 
     @FindBy(id = "tp-customer-createDate")
     public WebElement editCustomerCreateDate; //date format --> YYYY-MM-DD HH:mm
