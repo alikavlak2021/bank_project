@@ -73,10 +73,10 @@ public class DefaultPage {
     @FindBy(xpath = "//input[@name='createDate']" )
     public WebElement createDateDropdownField;
 
-    @FindBy(xpath = "//input[@name='country']" )
+    @FindBy(id = "tp-customer-country")
     public WebElement countryDropdownField;
 
-    @FindBy(xpath = "//input[@name='state']" )
+    @FindBy(id = "tp-customer-state")
     public WebElement stateField;
 
     @FindBy(xpath = "//input[@name='user']" )
@@ -88,11 +88,19 @@ public class DefaultPage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
+
     @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
     public WebElement namesButton;
 
     @FindBy(xpath = "(//*[contains(text(),'Password')])[2]")
     public WebElement passwordButton;
+
+
+    @FindBy(partialLinkText = "My Accounts")
+    public WebElement myAccountsDropdown;
+
+
+
 
 
 }

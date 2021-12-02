@@ -1,6 +1,6 @@
 @login
 Feature: user can login with valid credentials
-@customer_creation_byemployee
+@customer_creation_byEmployee
 Scenario Outline:
   Given user is on the main  page
   And user verifies the GMIBANK text

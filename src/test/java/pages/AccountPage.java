@@ -14,4 +14,13 @@ public class AccountPage {
 
     @FindBy(linkText = "Create a new Account")
     public WebElement createNewAccountLink;
+
+    @FindBy(id = "tp-account-accountType")
+    public WebElement accountTypeDropdown;
+
+    @FindBy(id = "tp-account-accountStatusType")
+    public WebElement accountStatusDropdown;
+
+
+
 }
