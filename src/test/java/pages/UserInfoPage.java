@@ -44,3 +44,6 @@ public class UserInfoPage {
     public WebElement invalidEmailText;
 
 }
+
+}
+
