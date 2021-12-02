@@ -91,6 +91,12 @@ public class RegistrationPage {
     @FindBy(xpath="//*[contains(text(),'Your email is invalid.')]")
     public WebElement invalidMailText;
 
+    @FindBy(xpath ="//div[@class='invalid-feedback']" )
+    public WebElement invalidTextAddress;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[5]")
+    public WebElement invalidPhoneText;
+
 
     }
 
