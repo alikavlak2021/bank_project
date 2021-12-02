@@ -19,8 +19,11 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@Password_Strength_Test",
+
+        tags = "@firstExample",
         dryRun = false
+
+
 )
 public class Runner {
 
