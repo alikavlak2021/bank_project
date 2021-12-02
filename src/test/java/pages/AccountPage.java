@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AccountPage {
-    public AccountPage(){
+    public AccountPage()    {
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "//span[text()='Accounts']")

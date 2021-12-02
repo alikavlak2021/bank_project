@@ -88,5 +88,11 @@ public class DefaultPage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
+    @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
+    public WebElement namesButton;
+
+    @FindBy(xpath = "(//*[contains(text(),'Password')])[2]")
+    public WebElement passwordButton;
+
 
 }
