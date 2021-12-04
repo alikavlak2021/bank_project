@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.*;
+import utilities.ConfigReader;
 import utilities.ReusableMethods;
 
 public class US008_OldPassword_Step_Defs {
@@ -53,14 +54,16 @@ public class US008_OldPassword_Step_Defs {
     @Given("user types new password {string}")
     public void user_types_new_password(String püf)    {
     customersPasswordPage.newPasswordField.sendKeys(püf);
+    customersPasswordPage.confirmPasswordField.click();
+    ReusableMethods.waitFor(2);
     }
 
-//    @Then("user see the error message")
-//    public void user_see_the_error_message() {
-//        String different = customersPasswordPage.differentText.getText();
-//        Assert.assertTrue(different.contains("should be different"));
-//
-//    }
+    @Then("user verify the error message")
+    public void user_verify_the_error_message() {
+    ReusableMethods.waitFor(2);
+     Assert.assertTrue(customersPasswordPage.differentText.isDisplayed());
+
+    }
     @Then("user clears the new password fields")
     public void user_clears_the_new_password_fields() {
         customersPasswordPage.newPasswordField.clear();
@@ -98,6 +101,10 @@ public class US008_OldPassword_Step_Defs {
         ReusableMethods.waitFor(1);
         customersPasswordPage.newPasswordField.sendKeys("sdf");
         Assert.assertTrue(customersPasswordPage.fifthofChartLevel.isEnabled());
+    }
+    @Then("user confirm the new password")
+    public void user_confirm_the_new_password() {
+    customersPasswordPage.confirmPasswordField.sendKeys(ConfigReader.getProperty("customerConfirmPassword"));
     }
 
 

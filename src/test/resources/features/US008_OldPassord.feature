@@ -12,14 +12,14 @@ Feature: Old_Password
     And user clicks Password button
     And user types current password "<currentPassword>"
     And user types new password "<newPassword>"
-   # Then user see the error message
+    Then user verify the error message
     And user clears the new password fields
     And user enter uppercase char and verify level chart increase
     And user enter lowercase char and verify level chart increase
     And user enter a digit and level chart increase
     And user enter special char and verify level chart increase
-  And user enter any 3 char and verify level chart becames full green
-
+    And user enter any 3 char and verify level chart becames full green
+    And user confirm the new password
 
 
     Examples:

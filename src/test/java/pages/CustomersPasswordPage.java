@@ -34,6 +34,8 @@ public class CustomersPasswordPage {
     @FindBy(xpath = "(//li[@class='point'])[5]")
     public WebElement fifthofChartLevel;
 
+    @FindBy(id="confirmPassword")
+    public WebElement confirmPasswordField;
 
 
 }
