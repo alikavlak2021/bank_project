@@ -19,7 +19,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@registerNewUserUI",
+        tags = "@employee_manage_customer",
 
         dryRun = false
 )

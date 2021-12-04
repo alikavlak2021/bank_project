@@ -1,6 +1,6 @@
 @employee_manage_customer
 
-Feature:
+Feature: US0012 - Employee Manage Customer Information
 
   Scenario Outline: Manage Customer Information
     Given user is on the main  page
