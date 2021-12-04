@@ -13,7 +13,7 @@ public class EditCustomerPage {
     @FindBy(xpath = "//span[contains(text(),'Create or edit a Customer')]")
     public WebElement createOrEditACustomerText;
 
-    @FindBy(name = "firstName")
+    @FindBy(id = "tp-customer-firstName")
     public WebElement editCustomerFirstName;
 
     @FindBy(name = "lastName")
@@ -31,7 +31,16 @@ public class EditCustomerPage {
     @FindBy(name = "phoneNumber")
     public WebElement editCustomerPhoneNumber;
 
-    @FindBy(name = "zipCode")
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement invalidMobilePhoneNumber;
+
+    @FindBy(id = "tp-customer-phoneNumber")
+    public WebElement editCustomerPhoneNumber;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement invalidPhoneNumber;
+
+    @FindBy(id = "tp-customer-zipCode")
     public WebElement editCustomerZipCode;
 
     @FindBy(name = "address")
@@ -42,8 +51,11 @@ public class EditCustomerPage {
 
     @FindBy(name = "ssn")
     public WebElement editCustomerSsn;
+  
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[3]")
+    public WebElement invalidSsn;
 
-    @FindBy(name = "createDate")
+    @FindBy(id = "tp-customer-createDate")
     public WebElement editCustomerCreateDate; //date format --> YYYY-MM-DD HH:mm
 
     @FindBy(name = "country")
@@ -76,4 +88,67 @@ public class EditCustomerPage {
     //After clicking save button above, this message appears on the Customers Page
     @FindBy(xpath = "//*[contains(text(),'translation-not-found')]")
     public WebElement savedMessageText;
+
+    @FindBy(id = "search-ssn")
+    public WebElement searchSSNField;
+
+    @FindBy(xpath = "//button[@class='btn btn-secondary']")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "//input[@name='firstName']" )
+    public WebElement firstNameField;
+
+    @FindBy(xpath = "//input[@name='lastName']" )
+    public WebElement lastNameField;
+
+    @FindBy(xpath = "//input[@name='middleInitial']" )
+    public WebElement middleInitialField;
+
+    @FindBy(xpath = "//input[@name='email']" )
+    public WebElement emailField;
+
+    @FindBy(xpath = "//input[@name='mobilePhoneNumber']" )
+    public WebElement mobilePhoneNumberField;
+
+    @FindBy(id = "tp-customer-phoneNumber")
+    public WebElement phoneNumberField;
+
+    @FindBy(xpath = "//input[@name='zipCode']" )
+    public WebElement zipCodeField;
+
+    @FindBy(xpath = "//input[@name='address']" )
+    public WebElement addressField;
+
+    @FindBy(xpath = "//input[@name='city']" )
+    public WebElement cityField;
+
+    @FindBy(xpath = "//input[@name='ssn']" )
+    public WebElement ssnField;
+
+    @FindBy(xpath = "//input[@name='createDate']" )
+    public WebElement createDateDropdownField;
+
+    @FindBy(id = "tp-customer-country")
+    public WebElement countryDropdownField;
+
+    @FindBy(xpath = "//input[@name='state']" )
+    public WebElement stateField;
+
+    @FindBy(xpath = "//input[@name='user']" )
+    public WebElement userDropdownField;
+
+    @FindBy(xpath = "//input[@name='account']" )
+    public WebElement accountDropdownField;
+
+    @FindBy(id = "save-entity")
+    public WebElement saveButton;
+
+    @FindBy(partialLinkText = "My Accounts")
+    public WebElement myAccountsDropdown;
+
+    @FindBy(xpath = "//div[contains(text(), 'translation-not-found')]")
+    public WebElement translationNotFound;
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement successMessageCreateCustomerBackup;
 }

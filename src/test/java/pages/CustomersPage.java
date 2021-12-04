@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.poi.hssf.record.UserSViewBegin;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,7 +47,7 @@ public class CustomersPage {
     public WebElement viewButton;
 
     @FindBy(xpath = "//a[@class='btn btn-primary']")
-    public WebElement customerInfoEditButtonInCustomerPage; // this page opens after I click View button, it's a specific customer page
+    public WebElement customerInfoEditButtonInCustomerPage; // this page opens after i click View button
 
     @FindBy(xpath = "//*[contains(text(),'Edit')]")
     public WebElement editButton;

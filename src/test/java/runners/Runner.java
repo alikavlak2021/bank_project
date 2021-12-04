@@ -20,9 +20,9 @@ import utilities.Driver;
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@employee_manage_customer",
-
+        //tags = "@us11CustomerAccount_negative",
         dryRun = false
-)
+
 public class Runner {
 
 }
