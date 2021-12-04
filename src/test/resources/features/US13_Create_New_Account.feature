@@ -1,8 +1,7 @@
-Feature: Create or Edit Account
-  @datePositive
-  Scenario Outline: US14 Date should be created on the time of account creation
+Feature: Create a New Account
+  @newAccount
+  Scenario Outline: US13 An Employee can create a new Account
     Given user is on the main  page
-    And user verifies the GMIBANK text
     And user navigates the sing in page
     And user verifies the sing in page
     And user enters Username "<UserName>"
@@ -20,10 +19,10 @@ Feature: Create or Edit Account
     And user selects Account Status Type
     And user enters Create Date
     And user enters Closed Date
-    And user selects employee
     Then user clicks Save button
-    Then user verify the accounts page
-    Then user close the application
+    Then verify the success message
+
     Examples:
       |UserName|Password|Description|Balance|
       |bf_employee1|Magic46.|BugFinder|1500 |
+
