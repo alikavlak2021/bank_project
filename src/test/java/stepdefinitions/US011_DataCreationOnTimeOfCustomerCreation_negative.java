@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import pages.*;
 
-public class US11_DataCreationOnTimeOfCustomerCreation_negative {
+public class US011_DataCreationOnTimeOfCustomerCreation_negative {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();

@@ -14,7 +14,7 @@ import utilities.WriteToTxt;
 
 import java.util.List;
 
-public class US10_CreateWithFakerStepDefs {
+public class US010_CreateWithFakerStepDefs {
 
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();

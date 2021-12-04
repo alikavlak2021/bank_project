@@ -8,7 +8,7 @@ import pages.MainPage;
 import pages.RegistrationPage;
 import utilities.ReusableMethods;
 
-public class US05_Negative_Password_Step_Defs {
+public class US005_Negative_Password_Step_Defs {
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();

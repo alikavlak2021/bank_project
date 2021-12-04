@@ -4,8 +4,6 @@ target
 .DS_Store
 test-output
 src/test/java/pojos/Registrant.java
-src/test/java/stepdefinitions/US03_Negative_Password_Step_Defs.java
-src/test/resources/features/US09_create_customer.feature
 src/test/java/utilities/Driver.java
 
 
