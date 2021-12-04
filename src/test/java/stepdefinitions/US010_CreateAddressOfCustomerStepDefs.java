@@ -8,7 +8,7 @@ import pages.DefaultPage;
 import utilities.ReusableMethods;
 
 
-public class US10_CreateAddressOfCustomerStepDefs {
+public class US010_CreateAddressOfCustomerStepDefs {
         DefaultPage defaultPage = new DefaultPage();
 
         @Then("user enters middle initial {string}")

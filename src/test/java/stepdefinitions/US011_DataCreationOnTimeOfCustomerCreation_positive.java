@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-public class US11_DataCreationOnTimeOfCustomerCreation_positive {
+public class US011_DataCreationOnTimeOfCustomerCreation_positive {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();

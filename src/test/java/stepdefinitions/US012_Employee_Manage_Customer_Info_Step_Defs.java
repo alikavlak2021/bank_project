@@ -7,7 +7,7 @@ import pages.*;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US12_Employee_Manage_Customer_Info_Step_Defs {
+public class US012_Employee_Manage_Customer_Info_Step_Defs {
 
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();

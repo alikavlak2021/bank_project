@@ -11,7 +11,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 
-public class US09_CreateCustomerStepDefs {
+public class US009_CreateCustomerStepDefs {
 
     LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();
