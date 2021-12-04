@@ -19,7 +19,8 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@us11CustomerAccount_negative",
+        tags = "@employee_manage_customer",
+        //tags = "@us11CustomerAccount_negative",
         dryRun = false
 
 public class Runner {
