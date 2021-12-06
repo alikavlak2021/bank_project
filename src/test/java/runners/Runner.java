@@ -1,3 +1,4 @@
+
 package runners;
 
 import io.cucumber.java.en.*;
@@ -19,7 +20,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@test007-2",
+        tags = "@test",
         dryRun = false
 
 public class Runner {

@@ -100,10 +100,10 @@ public class US002_RegistrationNegativeSceneriosStepDef {
         Assert.assertFalse( registrationPage.invalidPhoneText.getText().contains("is invalid"));
 
     }
-    @Given("user enter invalid char phone number")
-    public void user_enter_invalid_char_phone_number(String invalidTel) {
-        registrationPage.phoneTab.sendKeys(invalidTel,Keys.ENTER);
-    }
+   // @Given("user enter invalid char phone number")
+   // public void user_enter_invalid_char_phone_number(String invalidTel) {
+     //   registrationPage.phoneTab.sendKeys(invalidTel,Keys.ENTER);
+    //}
 
     @Given("user see the invalid email message")
     public void user_see_the_invalid_email_message() {
