@@ -22,7 +22,6 @@ Feature: Registration_negative
  And user verify the invalid address message
  And user enter invalid phone number "<invalid phone number>"
  And user see the invalid phone number message
-# And user enter invalid char phone number
  And user enters invalid email "<invalid email>"
  And user see the invalid email message
  And user close the application
