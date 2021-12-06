@@ -34,8 +34,8 @@ public class EditCustomerPage {
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement invalidMobilePhoneNumber;
 
-    @FindBy(id = "tp-customer-phoneNumber")
-    public WebElement editCustomerPhoneNumber;
+//    @FindBy(id = "tp-customer-phoneNumber")
+//    public WebElement editCustomerPhoneNumber;
 
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
     public WebElement invalidPhoneNumber;
@@ -151,4 +151,7 @@ public class EditCustomerPage {
 
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement successMessageCreateCustomerBackup;
+
+    @FindBy(xpath = "//*[contains(text(), 'BF Customer1')]")
+    public WebElement bfCustomer1IsDisplayed;
 }
