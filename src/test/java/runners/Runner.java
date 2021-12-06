@@ -21,7 +21,7 @@ import utilities.Driver;
         glue = "stepdefinitions",
         tags = "@test007-2",
         dryRun = false
-)
-public class Runner{
+
+public class Runner {
 
 }
