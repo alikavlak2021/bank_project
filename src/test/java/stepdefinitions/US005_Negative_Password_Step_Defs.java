@@ -8,7 +8,7 @@ import pages.MainPage;
 import pages.RegistrationPage;
 import utilities.ReusableMethods;
 
-public class US05_Negative_Password_Step_Defs {
+public class US005_Negative_Password_Step_Defs {
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
@@ -34,8 +34,8 @@ public class US05_Negative_Password_Step_Defs {
 
     }
 
-    @When("click the signin button")
-    public void click_the_signin_button() {
+    @When("click the sign in button")
+    public void click_the_sign_in_button() {
 
         loginpage.signInButtonTab.click();
     }

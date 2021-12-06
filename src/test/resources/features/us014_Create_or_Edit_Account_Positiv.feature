@@ -25,5 +25,5 @@ Feature: Create or Edit Account
     Then user verify the accounts page
     Then user close the application
     Examples:
-    |UserName|Password|Description|Balance|
-    |bf_employee1|Magic46.|BugFinder|1500 |
+      |UserName|Password|Description|Balance|
+      |bf_employee1|Magic46.|BugFinder|1500 |

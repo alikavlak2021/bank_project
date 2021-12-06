@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.poi.hssf.record.UserSViewBegin;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +10,7 @@ public class CustomersPage {
     public CustomersPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
-    @FindBy(xpath = "//*[contains(text(),'Customers')]")
+    @FindBy(xpath = "(//span[contains(text(),'Customers')])[2]")
     public WebElement customersText;
 
     @FindBy(id = "jh-create-entity")
@@ -46,16 +47,19 @@ public class CustomersPage {
     public WebElement viewButton;
 
     @FindBy(xpath = "//a[@class='btn btn-primary']")
-    public WebElement customerInfoEditButtonInCustomerPage; // this page opens after I click View button, it's a specific customer page
+    public WebElement customerInfoEditButtonInCustomerPage; // this page opens after i click View button
 
     @FindBy(xpath = "//*[contains(text(),'Edit')]")
     public WebElement editButton;
 
-    @FindBy(xpath = "//*[contains(text(),'Delete')]")
+    @FindBy(xpath = "(//*[contains(text(),'Delete')])[1]")
     public WebElement deleteButton;
 
     @FindBy(xpath = "//*[contains(text(),'Confirm delete operation')]")
     public WebElement confirmDeleteOperationMessage;
+
+    @FindBy(xpath = "//*[contains(text(), 'Cancel')]")
+    public WebElement cancelButton;
 
 
 

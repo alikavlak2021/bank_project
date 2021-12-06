@@ -15,7 +15,7 @@ import utilities.WriteToTxt;
 import com.github.javafaker.Faker;
 
 
-public class RegistrationStepDef {
+public class US001_RegistrationStepDef {
 
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
