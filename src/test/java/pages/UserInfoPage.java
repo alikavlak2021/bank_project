@@ -43,6 +43,6 @@ public class UserInfoPage {
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement invalidEmailText;
 
-}
+
 
 
