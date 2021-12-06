@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import utilities.Driver;
 
-@RunWith(Cucumber.class)
+
 @CucumberOptions(
         plugin = {
                 "pretty",
@@ -19,10 +19,9 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@employee_manage_customer",
-        //tags = "@us11CustomerAccount_negative",
+        tags = "@test007-2",
         dryRun = false
-
-public class Runner {
+)
+public class Runner{
 
 }
