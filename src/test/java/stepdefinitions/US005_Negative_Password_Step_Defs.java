@@ -3,6 +3,7 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import pages.EditCustomerPage;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.RegistrationPage;
@@ -13,6 +14,7 @@ public class US005_Negative_Password_Step_Defs {
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
     MainPage mainPage = new MainPage();
+    EditCustomerPage editCustomerPage = new EditCustomerPage();
 
     @When("navigates the login page")
     public void navigates_the_login_page() {
@@ -64,5 +66,13 @@ public class US005_Negative_Password_Step_Defs {
       Assert.assertTrue(loginpage.registerTitleText.getText().contains("Registration"));
         ReusableMethods.waitFor(2);
 
+    }
+    @When("user verifies the check your credentials and try again")
+    public void user_verifies_the_check_your_credentials_and_try_again() {
+       Assert.assertTrue(loginpage.userNamePasswordWrongMessage.isDisplayed());
+    }
+    @When("user verifies the success entrance message")
+    public void user_verifies_the_success_entrance_message() {
+   Assert.assertTrue(editCustomerPage.bfCustomer1IsDisplayed.isDisplayed());
     }
 }
