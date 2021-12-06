@@ -89,7 +89,13 @@ public class DefaultPage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
-    @FindBy(xpath = "//a[.='My Accounts']")
-    public WebElement myAccountsDropdown;
+    @FindBy(linkText = "My Accounts")
+    public WebElement myAccountsDropdownOfMyOperations;
+
+    @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
+    public WebElement accountNameDropdown;
+
+    @FindBy (linkText = "Sign out")
+    public WebElement signOut;
 
 }

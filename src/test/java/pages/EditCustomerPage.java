@@ -139,4 +139,16 @@ public class EditCustomerPage {
 
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement successMessageCreateCustomerBackup;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback' and .='This field is required.']")
+    public WebElement thisFieldRequiredMessage;
+
+    @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
+    public WebElement accountNameDropdown;
+
+    @FindBy (linkText = "Sign out")
+    public WebElement signOut;
+
+
+
 }

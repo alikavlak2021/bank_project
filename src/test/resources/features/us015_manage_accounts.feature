@@ -7,7 +7,7 @@ Feature: user can login with valid credentials
     And user verifies the sing in page
 
   @see_all_account_types
-  Scenario Outline:
+  Scenario Outline: see all account types
     And user enters Username "<customer_username>"
     And user enters Password "<customer_password>"
     And user enters Sing in button
@@ -15,13 +15,14 @@ Feature: user can login with valid credentials
     And user clicks the My Operations
     And user clicks on My Accounts
     Then verify that all account types are displayed
+    Given user signs out of employee account
 
     Examples:
       |customer_username|customer_password|
       |bf_customer1     |Customer1*       |
 
   @view_transactions
-  Scenario Outline:
+  Scenario Outline: User can view all transactions
 
     And user enters Username "<customer_username>"
     And user enters Password "<customer_password>"

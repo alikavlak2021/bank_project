@@ -24,6 +24,7 @@ public class US14_Create_or_Edit_Account_Positive_StepDefs {
     @Given("user navigates the sing in page")
     public void user_navigates_the_sing_in_page() {
         mainPage.signInAndRegistrationTab.click();
+        ReusableMethods.waitFor(1);
         mainPage.signInButton.click();
         ReusableMethods.waitFor(1);
     }
