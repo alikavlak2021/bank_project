@@ -11,7 +11,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US03_Negative_Password_Step_Defs {
+public class US003_Negative_Password_Step_Defs {
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
@@ -78,6 +78,8 @@ public class US03_Negative_Password_Step_Defs {
 
     @And("user close the application")
     public void user_close_the_application() {
+
+
 
         //Driver.closeDriver();
 

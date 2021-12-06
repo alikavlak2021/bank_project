@@ -10,46 +10,58 @@ public class EditCustomerPage {
     public EditCustomerPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
-    @FindBy(xpath = "//*[contains(text(),'Create or edit a Customer')]")
+    @FindBy(xpath = "//span[contains(text(),'Create or edit a Customer')]")
     public WebElement createOrEditACustomerText;
 
     @FindBy(id = "tp-customer-firstName")
     public WebElement editCustomerFirstName;
 
-    @FindBy(id = "tp-customer-lastName")
+    @FindBy(name = "lastName")
     public WebElement editCustomerLastName;
 
-    @FindBy(id = "tp-customer-middleInitial")
+    @FindBy(name = "middleInitial")
     public WebElement editCustomerMiddleInitial;
 
-    @FindBy(id = "tp-customer-email")
+    @FindBy(name = "email")
     public WebElement editCustomerEmail;
 
-    @FindBy(id = "tp-customer-mobilePhoneNumber")
+    @FindBy(name = "mobilePhoneNumber")
     public WebElement editCustomerMobilePhoneNumber;
 
-    @FindBy(id = "tp-customer-phoneNumber")
+    @FindBy(name = "phoneNumber")
     public WebElement editCustomerPhoneNumber;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement invalidMobilePhoneNumber;
+
+//    @FindBy(id = "tp-customer-phoneNumber")
+//    public WebElement editCustomerPhoneNumber;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement invalidPhoneNumber;
 
     @FindBy(id = "tp-customer-zipCode")
     public WebElement editCustomerZipCode;
 
-    @FindBy(id = "tp-customer-address")
+    @FindBy(name = "address")
     public WebElement editCustomerAddress;
 
-    @FindBy(id = "tp-customer-city")
+    @FindBy(name = "city")
     public WebElement editCustomerCity;
 
-    @FindBy(id = "tp-customer-ssn")
+    @FindBy(name = "ssn")
     public WebElement editCustomerSsn;
+  
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[3]")
+    public WebElement invalidSsn;
 
     @FindBy(id = "tp-customer-createDate")
     public WebElement editCustomerCreateDate; //date format --> YYYY-MM-DD HH:mm
 
-    @FindBy(id = "tp-customer-country")
+    @FindBy(name = "country")
     public WebElement editCustomerCountry;//dropdown
 
-    @FindBy(id = "tp-customer-state")
+    @FindBy(name = "state")
     public WebElement editCustomerState;
 
     @FindBy(id = "tp-customer-user")

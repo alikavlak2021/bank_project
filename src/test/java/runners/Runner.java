@@ -7,6 +7,10 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import utilities.Driver;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
@@ -20,8 +24,9 @@ import utilities.Driver;
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@manage_accounts",
-        dryRun = false
+
+        dryRun = true
 )
-public class Runner {
+public class Runner{
 
 }

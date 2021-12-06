@@ -11,7 +11,9 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.WriteToTxt;
 
-public class US10_CreateWithFakerStepDefs {
+import java.util.List;
+
+public class US010_CreateWithFakerStepDefs {
 
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();

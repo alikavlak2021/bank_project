@@ -11,5 +11,8 @@ src/test/java/stepdefinitions/US10_CreateAddressOfCustomerStepDefs.java
 src/test/java/stepdefinitions/US14_Create_or_Edit_Account_Positive_StepDefs.java
 src/test/resources/features/CustomerAPI9.feature
 
+src/test/java/pojos/Registrant.java
+src/test/java/utilities/Driver.java
+
 
 

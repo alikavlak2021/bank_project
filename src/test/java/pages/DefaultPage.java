@@ -93,9 +93,20 @@ public class DefaultPage {
     public WebElement myAccountsDropdownOfMyOperations;
 
     @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
+    public WebElement namesButton;
+
+    @FindBy(xpath = "(//*[contains(text(),'Password')])[2]")
+    public WebElement passwordButton;
+
+
+    @FindBy(partialLinkText = "My Accounts")
+    public WebElement myAccountsDropdown;
+
+    @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
     public WebElement accountNameDropdown;
 
     @FindBy (linkText = "Sign out")
     public WebElement signOut;
+
 
 }

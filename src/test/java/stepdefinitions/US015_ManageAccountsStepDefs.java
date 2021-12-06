@@ -12,7 +12,7 @@ package stepdefinitions;
         import java.sql.SQLOutput;
         import java.util.List;
 
-public class us15_ManageAccountsStepDefs {
+public class US015_ManageAccountsStepDefs {
 
     MyAccountsPage myAccountsPage = new MyAccountsPage();
     DefaultPage defaultPage = new DefaultPage();
