@@ -56,8 +56,8 @@ public class US006_UserInfoStepDef {
 
     @Given("{string} must be entered as email")
     public void must_be_entered_as_first_email(String email) {
-        //userInfoPage.emailBox.clear();
-        //userInfoPage.emailBox.sendKeys(email,Keys.ENTER);
+        userInfoPage.emailBox.clear();
+        userInfoPage.emailBox.sendKeys(email,Keys.ENTER);
         String emailText = userInfoPage.emailBox.getAttribute("value");
         Assert.assertEquals(email,emailText);
 
