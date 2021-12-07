@@ -28,14 +28,11 @@ public class EditCustomerPage {
     @FindBy(name = "mobilePhoneNumber")
     public WebElement editCustomerMobilePhoneNumber;
 
-    @FindBy(name = "phoneNumber")
-    public WebElement editCustomerPhoneNumber;
-
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement invalidMobilePhoneNumber;
 
     @FindBy(id = "tp-customer-phoneNumber")
-   public WebElement editCustomerPhoneNumber;
+    public WebElement editCustomerPhoneNumber;
 
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
     public WebElement invalidPhoneNumber;
