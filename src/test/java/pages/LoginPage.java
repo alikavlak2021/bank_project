@@ -50,7 +50,8 @@ public class LoginPage {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement signInButton;
 
-
+    @FindBy(xpath = "(//button[@type='button'])[5]")
+    public WebElement loginPageCancelButton;
 
 
 
