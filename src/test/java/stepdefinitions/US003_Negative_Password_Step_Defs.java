@@ -11,7 +11,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US03_Negative_Password_Step_Defs {
+public class US003_Negative_Password_Step_Defs {
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
@@ -20,7 +20,7 @@ public class US03_Negative_Password_Step_Defs {
     @Given("user enters negative password With Capital Char {string}")
     public void user_enters_negative_password_with_capital_char(String string) {
         registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutSmallChar"));
-        Assert.assertFalse(registrationPage.passwordStrength5.isDisplayed());
+        Assert.assertFalse(registrationPage.passwordStrength5.isSelected());
         ReusableMethods.waitFor(2);
         registrationPage.firstPassword.clear();
 
@@ -29,7 +29,7 @@ public class US03_Negative_Password_Step_Defs {
     @Then("user enters negative password With Small Char  {string}")
     public void user_enters_negative_password_with_small_char(String string) {
         registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutCapitalChar"));
-        Assert.assertFalse(registrationPage.passwordStrength5.isDisplayed());
+        Assert.assertFalse(registrationPage.passwordStrength5.isSelected());
         ReusableMethods.waitFor(2);
         registrationPage.firstPassword.clear();
 
@@ -38,7 +38,7 @@ public class US03_Negative_Password_Step_Defs {
     public void user_enters_negative_password_with_special_char(String string) {
 
         registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutSpecChar"));
-        Assert.assertFalse(registrationPage.passwordStrength5.isDisplayed());
+        Assert.assertFalse(registrationPage.passwordStrength5.isSelected());
         ReusableMethods.waitFor(2);
         registrationPage.firstPassword.clear();
 
@@ -46,20 +46,22 @@ public class US03_Negative_Password_Step_Defs {
     @Then("user enters negative password With Digits  {string}")
     public void user_enters_negative_password_with_digits(String string) {
         registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutDigits"));
-        Assert.assertFalse(registrationPage.passwordStrength5.isDisplayed());
+        Assert.assertFalse(registrationPage.passwordStrength5.isSelected());
         ReusableMethods.waitFor(3);
         registrationPage.firstPassword.clear();
 
     }
+
     @Then("user enters different from first password {string}")
     public void user_enters_different_from_first_password(String string) {
 
         registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("validPassword"));
-        Assert.assertTrue(registrationPage.passwordStrength5.isDisplayed());
+        Assert.assertFalse(registrationPage.passwordStrength5.isSelected());
         registrationPage.secondPassword.sendKeys(ConfigReader.getProperty("invalidPasswordDifferentFromFirst"));
         ReusableMethods.waitFor(1);
 
     }
+
     @Then("verify the confirmation message")
     public void verify_the_confirmation_message() {
         Assert.assertTrue(registrationPage.passwordShouldMatchWithFirstOne.getText().contains("do not match!"));
@@ -74,9 +76,16 @@ public class US03_Negative_Password_Step_Defs {
         ReusableMethods.waitFor(3);
     }
 
-    @Then("user close the application")
+    @And("user close the application")
     public void user_close_the_application() {
+
        Driver.closeDriver();
+
+
+
+
+        //Driver.closeDriver();
+
     }
 
 }

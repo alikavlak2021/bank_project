@@ -1,6 +1,6 @@
 @employee_manage_customer
 
-Feature:
+Feature: US0012 - Employee Manage Customer Information
 
   Scenario Outline: Manage Customer Information
     Given user is on the main  page
@@ -23,8 +23,8 @@ Feature:
     And user edits Last Name "<last_name>"
     And user edits Email "<email>"
     And user edits Mobile Phone Number "<mobile_phone_number>"
-    And user clicks Save button
-    Then user sees  the green message that includes "translation-not-found" in the "Manage Customers" page
+    And user clicks save button
+    Then user sees  the green message that includes "successMessage" in the Manage Customers page
     And user sees Delete button and clicks
     Then user verifies the "Confirm delete operation" message
 

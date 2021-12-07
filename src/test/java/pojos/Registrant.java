@@ -9,6 +9,7 @@ public class Registrant {
     private String userName;
     private String email;
     private String password;
+
     public String getSsn() {
 
         return ssn;

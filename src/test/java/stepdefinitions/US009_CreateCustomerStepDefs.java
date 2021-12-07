@@ -12,7 +12,10 @@ import pages.MainPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US09_CreateCustomerStepDefs {
+
+
+public class US009_CreateCustomerStepDefs {
+
 
     LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();
@@ -67,7 +70,7 @@ public class US09_CreateCustomerStepDefs {
     @Then("verify that email is populated")
     public void verify_that_email_is_populated() {
         System.out.println(defaultPage.emailField.getAttribute("value"));
-       Assert.assertFalse(defaultPage.emailField.getAttribute("Value").isEmpty());
+        Assert.assertFalse(defaultPage.emailField.getAttribute("Value").isEmpty());
     }
 
     @Then("verify that Mobile Phone Number is populated")

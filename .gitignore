@@ -3,4 +3,16 @@
 target
 .DS_Store
 test-output
-*.txt
+
+src/test/java/runners/Runner.java
+src/test/java/stepdefinitions/CustomerAPI9StepDefs.java
+src/test/java/stepdefinitions/Hooks.java
+src/test/java/stepdefinitions/US10_CreateAddressOfCustomerStepDefs.java
+src/test/java/stepdefinitions/US14_Create_or_Edit_Account_Positive_StepDefs.java
+src/test/resources/features/CustomerAPI9.feature
+
+src/test/java/pojos/Registrant.java
+src/test/java/utilities/Driver.java
+
+
+
