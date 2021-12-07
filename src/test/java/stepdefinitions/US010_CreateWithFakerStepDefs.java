@@ -2,13 +2,12 @@ package stepdefinitions;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
-import io.cucumber.plugin.event.Node;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import pojos.Registrant;
-import pojos.SSN;
-import utilities.ReadTxt;
+import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.WriteToTxt;
 
@@ -24,15 +23,12 @@ public class US010_CreateWithFakerStepDefs {
     MainPage mainPage = new MainPage();
     DefaultPage defaultPage = new DefaultPage();
 
-    SSN ssnNum = new SSN();
-
     @Given("user enters SSN number with faker")
     public void user_enters_ssn_number_with_faker() {
-      //  SSN_Number = faker.number().digits(9);
-        registrationPage.ssn.sendKeys(ssnNum.returnSSNwithHyphen());
-        //registrant.setSsn(ssnNum.getSSN_Number());
-        System.out.println(ssnNum.returnSSNwithHyphen());
-        System.out.println("get ssn= "+ssnNum.returnSSNwithHyphen());
+      String ssnNumber = faker.number().digits(9);
+        registrationPage.ssn.sendKeys(ssnNumber);
+        System.out.println(ssnNumber);
+        registrant.setSsn(ssnNumber);
     }
 
     @Given("user enters firstname with faker")
@@ -83,7 +79,6 @@ public class US010_CreateWithFakerStepDefs {
         registrationPage.secondPassword.sendKeys(password);
 
         registrant.setPassword(password);
-
     }
 
     @And("click the register button to register with faker")
@@ -96,8 +91,9 @@ public class US010_CreateWithFakerStepDefs {
 
 
     // The following part is to assign employee role to the new registrant
+
     AdminDefaultPage adminPage=new AdminDefaultPage();
-    AdminUserInfoPage userInfoPage = new AdminUserInfoPage();
+    AdminUserInfoPage adminUserInfoPage = new AdminUserInfoPage();
 
     @Then("click the signin button to login")
     public void click_signin_button_to_login () {
@@ -112,14 +108,14 @@ public class US010_CreateWithFakerStepDefs {
     }
     @Then("user finds the new registrant")
     public void user_finds_the_new_registrant() {
-        userInfoPage.createDateSorting.click();
-        userInfoPage.firstDeactivatedButton.click();
+        adminUserInfoPage.createDateSorting.click();
+        adminUserInfoPage.firstDeactivatedButton.click();
     }
     @Then("user assigns employee role to the new registrant")
     public void user_assigns_employee_role_to_the_new_registrant() {
-        userInfoPage.firstEditButton.click();
-        userInfoPage.roleEmployeeDropdown.click();
-        userInfoPage.roleAssignSaveButton.click();
+        adminUserInfoPage.firstEditButton.click();
+        adminUserInfoPage.roleEmployeeDropdown.click();
+        adminUserInfoPage.roleAssignSaveButton.click();
     }
     @Then("user signs out")
     public void user_signs_out() {
@@ -127,19 +123,38 @@ public class US010_CreateWithFakerStepDefs {
         adminPage.signOutDropdown.click();
     }
 
-    //The following part is sending valid data and successfull address creation for a new Customer SSN
-    EditCustomerPage editCustomerPage=new EditCustomerPage();
-    @Then("user enters {string} number of new registrant to search for the customer")
-    public void user_enters_number_of_new_registrant_to_search_for_the_customer(String ssn2) {
-       // SSN_Number = registrant.getSsn();
-        System.out.println(ssnNum.getSSN_NumberWithHyphen());
-        System.out.println("Could we get the SSN? ==> "+ ssnNum.getSSN_NumberWithHyphen());
+    //The following part is sending valid/invalid data and successfull address creation for a new Customer SSN
 
-        //we will get the ssn from customer_information.txt file
+    EditCustomerPage editCustomerPage=new EditCustomerPage();
+
+    @Given("user navigates the sign in page as a signed out user")
+    public void user_is_on_main_page_as_signed_out_user() {
+       mainPage.signInAndRegistrationTab.click();
+       ReusableMethods.waitFor(1);
+       mainPage.signInButton.click();
+//       if(mainPage.registerButton.getText().contains("egister")){
+//           System.out.println("is register displayed? It shouldnt");
+//           ReusableMethods.waitFor(1);
+//           mainPage.signInButton.click();
+//       }
+//
+//       else if (!mainPage.registerButton.isDisplayed()){
+//           System.out.println("register is not displayed");
+//           defaultPage.accountNameDropdown.click();
+//           defaultPage.signOut.click();
+//           mainPage.signInAndRegistrationTab.click();
+//           mainPage.signInButton.click();
+//       }
+
+    }
+    @Then("user enters {string} number of new registrant to search for the customer")
+    public void user_enters_number_of_new_registrant_to_search_for_the_customer(String ssnSpecified) {
+//        System.out.println(ssnNum.getSSN_NumberWithHyphen());
+//  we will get the ssn from customer_information.txt file
 //        List<String> newRegistarntList = ReadTxt.returnCustomerSSNList(path);
 //        String lastSSN = newRegistarntList.get(0);
 //        System.out.println(lastSSN);
-        editCustomerPage.searchSSNField.sendKeys(ssnNum.getSSN_NumberWithHyphen());
+        editCustomerPage.searchSSNField.sendKeys(ssnSpecified);
     }
     @Then("user enters middle initial with faker")
     public void user_enters_middle_initial_with_faker() {
@@ -156,6 +171,27 @@ public class US010_CreateWithFakerStepDefs {
     @Then("user enters zip code with faker")
     public void user_enters_zip_code_with_faker() {
         editCustomerPage.zipCodeField.sendKeys(faker.number().digits(5));
+    }
+
+    @Then("user clears address field")
+    public void user_clears_address() {
+        editCustomerPage.addressField.clear();
+    }
+
+    @Then("user clears city field")
+    public void user_clears_city() {
+        editCustomerPage.cityField.clear();
+    }
+
+    @Then("user clears country field")
+    public void user_clears_country() {
+        Select select = new Select(editCustomerPage.countryDropdownField);
+        select.selectByValue("");
+    }
+
+    @Then("user clears state field")
+    public void user_clears_state() {
+        editCustomerPage.stateField.clear();
     }
     @Then("user enters city with faker")
     public void user_enters_city_with_faker() {
@@ -175,15 +211,45 @@ public class US010_CreateWithFakerStepDefs {
     @Then("user clicks on save button on customer_create page")
     public void user_clicks_on_save_button_on_customer_create_page() {
         editCustomerPage.saveButton.click();
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(1);
 
-        String successMessageCreateCustomer = editCustomerPage.translationNotFound.getText();
-        Assert.assertTrue(successMessageCreateCustomer.contains("translation-not-found"));
+        //String successMessageCreateCustomer = editCustomerPage.translationNotFound.getText();
+       // Assert.assertTrue(successMessageCreateCustomer.contains("translation-not-found"));
     }
+    @Then("verify the error message for address field")
+    public void verify_error_message_for_address() {
+        Assert.assertTrue(editCustomerPage.thisFieldRequiredMessage.isDisplayed());
+    }
+    @Then("verify the error message for city field")
+    public void verify_error_message_for_city() {
+        Assert.assertTrue(editCustomerPage.thisFieldRequiredMessage.isDisplayed());
+    }
+
+    @Then("verify the error message for country field")
+    public void verify_error_message_for_country() {
+        Assert.assertTrue(editCustomerPage.thisFieldRequiredMessage.isDisplayed());
+    }
+    @Then("verify the error message for state field")
+    public void verify_error_message_for_state() {
+        Assert.assertTrue(editCustomerPage.thisFieldRequiredMessage.isDisplayed());
+
+//        System.out.println("1st " +adminUserInfoPage.customersHeading.getText());
+//        Assert.assertFalse(adminUserInfoPage.customersHeading.isDisplayed());
+//        System.out.println("2nd "+adminUserInfoPage.customersHeading.getText());
+    }
+    @Then("user signs out of employee account")
+    public void user_sign_out_of_employee_account() {
+        editCustomerPage.accountNameDropdown.click();
+        editCustomerPage.signOut.click();
+    }
+
     @Then("verify the success message on customer creation page")
     public void verify_the_success_message_on_customer_creation_page() {
         ReusableMethods.waitFor(1);
-        Assert.assertTrue(editCustomerPage.translationNotFound.getText().contains("translation-not-found"));
+//        Assert.assertTrue(editCustomerPage.translationNotFound.getText().contains("translation-not-found"));
+//        System.out.println(editCustomerPage.translationNotFound.getText());
+   Assert.assertTrue(adminUserInfoPage.customersHeading.isDisplayed());
+    System.out.println(adminUserInfoPage.customersHeading.getText());
     }
 
 }
