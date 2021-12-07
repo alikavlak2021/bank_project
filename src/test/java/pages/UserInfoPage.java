@@ -9,8 +9,8 @@ import java.util.List;
 
 public class UserInfoPage {
 
-    public UserInfoPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public UserInfoPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "(//a[@aria-haspopup='true'])[3]")
@@ -43,6 +43,6 @@ public class UserInfoPage {
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement invalidEmailText;
 
-
+}
 
 
