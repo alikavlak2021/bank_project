@@ -28,9 +28,6 @@ public class EditCustomerPage {
     @FindBy(name = "mobilePhoneNumber")
     public WebElement editCustomerMobilePhoneNumber;
 
-    @FindBy(name = "phoneNumber")
-    public WebElement editCustomerPhoneNumber;
-
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement invalidMobilePhoneNumber;
 
@@ -161,6 +158,7 @@ public class EditCustomerPage {
     @FindBy (linkText = "Sign out")
     public WebElement signOut;
 
-
+    @FindBy(xpath = "//*[contains(text(), 'BF Customer1')]")
+    public WebElement bfCustomer1IsDisplayed;
 
 }

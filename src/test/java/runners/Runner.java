@@ -1,3 +1,4 @@
+
 package runners;
 
 import io.cucumber.java.en.*;
@@ -6,7 +7,6 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import utilities.Driver;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -24,9 +24,9 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@manage_accounts",
-
         dryRun = true
+
 )
-public class Runner{
+public class Runner {
 
 }

@@ -30,6 +30,7 @@ MR.ii169-.,hattie.romaguera,Mao,Mante,641173730,288.948.7446 x7746,2082 Kirlin I
 MR.sr.168-.,christen.gutmann,Neal,Macejkovic,928362933,656.201.1604,526 Kutch Mount,jefferson.fadel@yahoo.com,
 MISSdvm011-.,eli.wolf,Dusty,Kihn,null,172-390-9394 x88186,201 Kihn Crescent,jody.lueilwitz@hotmail.com,
 MR.dvm714-.,milo.hane,Bernadette,Weber,null,147-738-2031 x93650,60176 Georgianna Plains,sammy.weimann@hotmail.com,
+<<<<<<< HEAD
 MRS.phd355-.,earlean.mante,Jennifer,Bergstrom,null,821-184-3960 x234,500 Noe Meadow,sheldon.will@yahoo.com,
 MS.i036-.,meg.gleichner,Tamika,Nienow,null,736.779.5350 x26278,3075 Bailey Courts,sindy.swift@yahoo.com,
 MR.iii668-.,lesha.wolf,Lavern,Beer,null,436.600.4476,25462 Prohaska Centers,bradly.mohr@gmail.com,
@@ -56,3 +57,6 @@ MRS.md302-.,jackie.kozey,Shaun,Wiegand,563470663,(593) 577-4856 x6251,8497 Tracy
 DR.md145-.,elfrieda.cronin,Alpha,Wilkinson,393709615,1-054-223-3323 x93843,6755 Botsford Meadows,herschel.balistreri@yahoo.com,
 MS.sr.862-.,serita.stracke,Fanny,Fisher,885983613,860-929-8329,552 Raymond Gateway,martin.dare@yahoo.com,
 DR.dds868-.,lourdes.ruecker,Jesse,Marvin,660793524,(574) 064-5752 x99095,75176 Ignacio Village,carmine.ritchie@hotmail.com,
+=======
+bug-finder01,jemo,James,Prosper,256-45-7862,9515555495,Dar-Es-Salaam,jemo45@gmail.com,
+>>>>>>> master

@@ -12,6 +12,7 @@ Scenario Outline: username is invalid
   And user enters username on login page "<username>"
   And user enters password on login page "<password>"
   And click the sign in button
+  And user verifies the check your credentials and try again
   And user close the application
    # username is invalid
 Examples: login page negative password test
@@ -24,6 +25,7 @@ Scenario Outline: password is invalid
   And user enters username on login page "<username>"
   And user enters password on login page "<password>"
   And click the sign in button
+  And user verifies the check your credentials and try again
   And user close the application
   # password is invalid
 Examples: login page negative password test
@@ -37,6 +39,7 @@ Scenario Outline: both of them are invalid
   And user enters username on login page "<username>"
   And user enters password on login page "<password>"
   And click the sign in button
+  And user verifies the check your credentials and try again
   And user close the application
   # both of them are invalid
 Examples: login page negative password test
@@ -73,6 +76,7 @@ Examples: login page negative password test
     And user enters username on login page "<username>"
     And user enters password on login page "<password>"
     And click the sign in button
+    And user verifies the success entrance message
     And user close the application
         #Both are valid
     Examples: login page negative password test
