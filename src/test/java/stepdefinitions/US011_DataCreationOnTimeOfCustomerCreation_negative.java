@@ -22,7 +22,7 @@ public class US011_DataCreationOnTimeOfCustomerCreation_negative {
     }
     @Given("user enters wrong phone number {string}")
     public void user_enters_wrong_phone_number(String WrongPhoneNumber) {
-           editCustomerPage.editCustomerPhoneNumber.sendKeys(WrongPhoneNumber);
+           editCustomerPage.editCustomerMobilePhoneNumber.sendKeys(WrongPhoneNumber);
     }
     @Given("user verifies the wrong phone number")
     public void user_verifies_the_wrong_phone_number() {
