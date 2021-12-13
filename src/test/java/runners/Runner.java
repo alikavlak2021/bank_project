@@ -19,8 +19,8 @@ import utilities.Driver;
                 //"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         features = "./src/test/resources/features",
-        glue = "stepdefinitions",
-        tags = "@test",
+        glue = "gmibank/stepdefinitions",
+        tags = "@us22_Customer",
         dryRun = false
 )
 public class Runner {
