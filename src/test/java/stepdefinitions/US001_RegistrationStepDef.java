@@ -101,7 +101,7 @@ public class US001_RegistrationStepDef {
     @Given("click the register button")
     public void click_the_register_button() {
         registrationPage.registerButton2.click();
-        WriteToTxt.saveRegistrantData(path, registrant);
+     //   WriteToTxt.saveRegistrantData(path, registrant);
     }
 
     @Then("verify the success message")

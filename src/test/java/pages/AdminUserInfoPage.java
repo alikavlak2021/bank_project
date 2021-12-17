@@ -26,6 +26,9 @@ public class AdminUserInfoPage {
     @FindBy (xpath = "//span[.='Save']")
     public WebElement roleAssignSaveButton;
 
+    @FindBy (xpath = "//h2[@id='tp-customer-heading']")
+    public WebElement customersHeading;
+
 
 
 

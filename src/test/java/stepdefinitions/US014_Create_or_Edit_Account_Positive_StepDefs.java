@@ -22,6 +22,7 @@ public class US014_Create_or_Edit_Account_Positive_StepDefs {
     @Given("user navigates the sing in page")
     public void user_navigates_the_sing_in_page() {
         mainPage.signInAndRegistrationTab.click();
+        ReusableMethods.waitFor(1);
         mainPage.signInButton.click();
         ReusableMethods.waitFor(1);
     }
@@ -82,6 +83,7 @@ public class US014_Create_or_Edit_Account_Positive_StepDefs {
     }
     @Given("user selects Account Type")
     public void user_selects_account_type() {
+
         Select select = new Select(accountPage.accountTypeDropdown);
         select.selectByIndex(2);
         accountPage.accountTypeDropdown.click();

@@ -7,8 +7,9 @@ import utilities.Driver;
 
 public class DefaultPage {
 
-    public DefaultPage(){
-        PageFactory.initElements(Driver.getDriver(),this); }
+    public DefaultPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//span[.='BF Employee1']")
     public WebElement employeeAccountNameText;
@@ -40,37 +41,37 @@ public class DefaultPage {
     @FindBy(xpath = "//button[@class='btn btn-secondary']")
     public WebElement searchButton;
 
-    @FindBy(xpath = "//input[@name='firstName']" )
+    @FindBy(xpath = "//input[@name='firstName']")
     public WebElement firstNameField;
 
-    @FindBy(xpath = "//input[@name='lastName']" )
+    @FindBy(xpath = "//input[@name='lastName']")
     public WebElement lastNameField;
 
-    @FindBy(xpath = "//input[@name='middleInitial']" )
+    @FindBy(xpath = "//input[@name='middleInitial']")
     public WebElement middleInitialField;
 
-    @FindBy(xpath = "//input[@name='email']" )
+    @FindBy(xpath = "//input[@name='email']")
     public WebElement emailField;
 
-    @FindBy(xpath = "//input[@name='mobilePhoneNumber']" )
+    @FindBy(xpath = "//input[@name='mobilePhoneNumber']")
     public WebElement mobilePhoneNumberField;
 
     @FindBy(id = "tp-customer-phoneNumber")
     public WebElement phoneNumberField;
 
-    @FindBy(xpath = "//input[@name='zipCode']" )
+    @FindBy(xpath = "//input[@name='zipCode']")
     public WebElement zipCodeField;
 
-    @FindBy(xpath = "//input[@name='address']" )
+    @FindBy(xpath = "//input[@name='address']")
     public WebElement addressField;
 
-    @FindBy(xpath = "//input[@name='city']" )
+    @FindBy(xpath = "//input[@name='city']")
     public WebElement cityField;
 
-    @FindBy(xpath = "//input[@name='ssn']" )
+    @FindBy(xpath = "//input[@name='ssn']")
     public WebElement ssnField;
 
-    @FindBy(xpath = "//input[@name='createDate']" )
+    @FindBy(xpath = "//input[@name='createDate']")
     public WebElement createDateDropdownField;
 
     @FindBy(id = "tp-customer-country")
@@ -79,15 +80,17 @@ public class DefaultPage {
     @FindBy(id = "tp-customer-state")
     public WebElement stateField;
 
-    @FindBy(xpath = "//input[@name='user']" )
+    @FindBy(xpath = "//input[@name='user']")
     public WebElement userDropdownField;
 
-    @FindBy(xpath = "//input[@name='account']" )
+    @FindBy(xpath = "//input[@name='account']")
     public WebElement accountDropdownField;
 
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
+    @FindBy(linkText = "My Accounts")
+    public WebElement myAccountsDropdownOfMyOperations;
 
     @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
     public WebElement namesButton;
@@ -99,8 +102,11 @@ public class DefaultPage {
     @FindBy(partialLinkText = "My Accounts")
     public WebElement myAccountsDropdown;
 
+    @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[3]")
+    public WebElement accountNameDropdown;
 
-
+    @FindBy (linkText = "Sign out")
+    public WebElement signOut;
 
 
 }
