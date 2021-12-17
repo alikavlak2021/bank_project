@@ -1,13 +1,17 @@
 package stepdefinitions;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojos.Customer9;
+import pojos.US022_States;
 import utilities.ConfigReader;
 import io.restassured.*;
+import utilities.WriteToTxt;
+
 import static io.restassured.RestAssured.*;
 
 public class CustomerAPI9StepDefs {
@@ -20,7 +24,7 @@ public class CustomerAPI9StepDefs {
 
 String bearerToken = ConfigReader.getProperty("api_bearer_token");
 
-Customer9 [] customers;
+US022_States[] customers;
 
     @Given("user uses api end point {string} to get all customers")
     public void user_uses_api_end_point_to_get_all_customers(String url) {
@@ -39,15 +43,16 @@ Customer9 [] customers;
 
     }
     @Given("user should get all customer data and deserialize data to java")
-    public void user_should_get_all_customer_data_and_deserialize_data_to_java() {
+    public void user_should_get_all_customer_data_and_deserialize_data_to_java() throws JsonProcessingException {
         ObjectMapper obj = new ObjectMapper();
-        //customers = obj.readValue(response.asString().Customer9[].class);
+        customers = obj.readValue(response.asString(),US022_States[].class);
 
 
 
     }
     @Given("user saves the customer data to correspondent files")
     public void user_saves_the_customer_data_to_correspondent_files() {
+        WriteToTxt.saveAllStates("fileName",customers);
 
     }
     @Then("user needs to validate all customer api data")

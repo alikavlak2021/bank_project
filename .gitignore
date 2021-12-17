@@ -13,6 +13,9 @@ src/test/resources/features/CustomerAPI9.feature
 
 src/test/java/pojos/Registrant.java
 src/test/java/utilities/Driver.java
+src/test/java/stepdefinitions/AliCalisiyor.java
+src/test/resources/features/alicalisacak.feature
+src/test/java/pojos/AliCalissinBeya.java
 
 
 
