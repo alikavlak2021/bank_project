@@ -64,16 +64,25 @@ public class WriteToTxt {
 //        } catch(Exception e){
 //        }
 //    }
-//    public static void saveAllStates(String fileName, States[] states)  {
-//        try {
-//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-//            for (int i=0; i<states.length; i++)
-//                writer.append(states[i].getName()+" , "+states[i].getId()+"\n");
-//            writer.close();
-//        } catch(Exception e){
-//        }
-  //  }
-  //  public static void saveAllStates2(String fileName, States[] states)  {
+    public static void saveAllStates(String fileName22, US022_States[] states22)  {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName22, true));
+            for (int i = 0; i< states22.length; i++)
+                writer.append(states22[i].getName()+" , "+ states22[i]+"\n");
+            writer.close();
+        } catch(Exception e){
+        }
+    }
+
+    public static void saveAllStates022(String fileName22, US022_States[] states22) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName22, true));
+            for (int i = 0; i < states22.length; i++)
+                writer.append(states22[i].getName()+"\n");
+            writer.close();
+        } catch (Exception e) {
+        }
+        //  public static void saveAllStates2(String fileName, States[] states)  {
 //        try {
 //            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 //            for (int i=0; i<states.length; i++)
@@ -105,55 +114,55 @@ public class WriteToTxt {
 //        } catch(Exception e){
 //        }
 //    }
-    public static void saveAllCustomersComingFromDB(String fileName, List<Object> allCustomer)  {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-            for (int i=0; i<allCustomer.size(); i++) {
-                writer.append(allCustomer.get(i) + ",\n" );
-            }
-            writer.close();
-        } catch(Exception e){
-        }
-    }
-    public static void saveDifferentInfoFromDB(String fileName, List<Object> data)  {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-            for (int i=0; i<data.size(); i++) {
-                writer.append(data.get(i) + ",\n" );
-            }
-            writer.close();
-        } catch(Exception e){
-        }
-    }
-    public static void saveAccountInfo(String fileName, String description)  {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-            writer.append(description + ",\n" );
-            writer.close();
-        } catch(Exception e){
-        }
-    }
-    public static void saveCustomerInfo ( List <String> items){
-        String fileLocation = "location";
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation, true));
-            for (int i = 0; i < items.size(); i++) {
-                writer.append(items.get(i)+"\n");
-            }
-        }catch (Exception e){
-        }
-    }
-    public static void saveRegistrantData(String fileName, Registrant registrant)  {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-            writer.append(registrant.getPassword()+","+ registrant.getUserName()+",");
-            writer.append(registrant.getFirstName()+","+ registrant.getLastName()+",");
-            writer.append(registrant.getSsn()+","+ registrant.getPhoneNumber()+",");
-            writer.append(registrant.getAddress()+","+ registrant.getEmail()+",\n");
-            writer.close();
-        } catch(Exception e){
-        }
-    }
+//    public static void saveAllCustomersComingFromDB(String fileName, List<Object> allCustomer)  {
+//        try {
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+//            for (int i=0; i<allCustomer.size(); i++) {
+//                writer.append(allCustomer.get(i) + ",\n" );
+//            }
+//            writer.close();
+//        } catch(Exception e){
+//        }
+//    }
+//    public static void saveDifferentInfoFromDB(String fileName, List<Object> data)  {
+//        try {
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+//            for (int i=0; i<data.size(); i++) {
+//                writer.append(data.get(i) + ",\n" );
+//            }
+//            writer.close();
+//        } catch(Exception e){
+//        }
+//    }
+//    public static void saveAccountInfo(String fileName, String description)  {
+//        try {
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+//            writer.append(description + ",\n" );
+//            writer.close();
+//        } catch(Exception e){
+//        }
+//    }
+//    public static void saveCustomerInfo ( List <String> items){
+//        String fileLocation = "location";
+//        try {
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation, true));
+//            for (int i = 0; i < items.size(); i++) {
+//                writer.append(items.get(i)+"\n");
+//            }
+//        }catch (Exception e){
+//        }
+//    }
+//    public static void saveRegistrantData(String fileName, Registrant registrant)  {
+//        try {
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+//            writer.append(registrant.getPassword()+","+ registrant.getUserName()+",");
+//            writer.append(registrant.getFirstName()+","+ registrant.getLastName()+",");
+//            writer.append(registrant.getSsn()+","+ registrant.getPhoneNumber()+",");
+//            writer.append(registrant.getAddress()+","+ registrant.getEmail()+",\n");
+//            writer.close();
+//        } catch(Exception e){
+//        }
+//    }
 //    public static void saveDataInFileWithSSN(String fileName, Customer4[] customers)  {
 //        try {
 //            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -176,5 +185,6 @@ public class WriteToTxt {
 //        }
 //    }
 
+    }
 }
 

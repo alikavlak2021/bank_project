@@ -1,9 +1,6 @@
 package utilities;
 
-import pojos.Customer;
-import pojos.Registrant;
-import pojos.States;
-import pojos.User;
+import pojos.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -268,26 +265,26 @@ public class ReadTxt {
         return list;
     }
 
-    public static List<States> returnAllStates(String filePath){
-        List<States>all = new ArrayList<>();
+    public static List<US022_States> returnAllStates(String filePath){
+        List<US022_States> all = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
             System.out.println(line);
             int i = 0;
             while (line != null) {
-                States state = new States();
+                US022_States state22 = new US022_States();
                 String [] allLine = line.split(",");
 
-                int id = Integer.parseInt(allLine[1].trim());
-                state.setId(id);
-                state.setName(allLine[0]);
+                String name = (allLine[1].trim());
+                //state22.setId(state22.getId());
+                state22.setName(allLine[0]);
                 sb.append(System.lineSeparator());
                 line = br.readLine();
 
                 System.out.println(i++);
 
-                all.add(state);
+                all.add(state22);
             }
         }catch (Exception e){
             e.printStackTrace();

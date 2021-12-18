@@ -85,7 +85,7 @@ public class US010_CreateWithFakerStepDefs {
     public void user_click_the_register_button_to_register_with_faker() {
         registrationPage.registerButton2.click();
         ReusableMethods.waitFor(1);
-        WriteToTxt.saveRegistrantData(path, registrant);
+       // WriteToTxt.saveRegistrantData(path, registrant);
 
     }
 
