@@ -1,6 +1,6 @@
 package pojos;
 
-public class Registrant {
+public class Applicant {
     private String ssn;
     private String firstName;
     private String lastName;
