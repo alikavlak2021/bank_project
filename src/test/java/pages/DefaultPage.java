@@ -89,6 +89,11 @@ public class DefaultPage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
+<<<<<<< HEAD
+    @FindBy(xpath = "//span[.='BF Customer1']")
+    public WebElement customerAccountNameText;
+}
+=======
     @FindBy(linkText = "My Accounts")
     public WebElement myAccountsDropdownOfMyOperations;
 
@@ -110,3 +115,4 @@ public class DefaultPage {
 
 
 }
+>>>>>>> master

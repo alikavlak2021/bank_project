@@ -1,3 +1,7 @@
+
+package utilities;public class Authentication {
+}
+
 package utilities;
 
 import io.restassured.RestAssured;
@@ -23,3 +27,4 @@ public class Authentication {
         return token.getString("id_token");
     }
 }
+

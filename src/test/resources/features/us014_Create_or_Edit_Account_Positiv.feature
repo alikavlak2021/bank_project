@@ -3,11 +3,11 @@ Feature: Create or Edit Account
   Scenario Outline: US14 Date should be created on the time of account creation
     Given user is on the main  page
     And user verifies the GMIBANK text
-    And user navigates the sing in page
-    And user verifies the sing in page
+    And user navigates the sign in page
+    And user verifies the sign in page
     And user enters Username "<UserName>"
     And user enters Password "<Password>"
-    And user enters Sing in button
+    And user enters Sign in button
     And user navigates the default page
     And user clicks the My Operations
     And user clicks the Manage Accounts

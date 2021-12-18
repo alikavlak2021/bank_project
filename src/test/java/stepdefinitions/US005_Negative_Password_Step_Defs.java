@@ -25,19 +25,27 @@ public class US005_Negative_Password_Step_Defs {
     @When("user enters username on login page {string}")
     public void user_enters_username_on_login_page(String username) {
         loginpage.loginUserName.sendKeys(username);
+
         ReusableMethods.waitFor(1);
+
 
     }
 
     @When("user enters password on login page {string}")
     public void user_enters_password_on_login_page(String password) {
         loginpage.loginPassword.sendKeys(password);
-        ReusableMethods.waitFor(1);
+
+    }
+
+    @When("click the signin button")
+    public void click_the_signin_button() {
+    ReusableMethods.waitFor(1);
 
     }
 
     @When("click the sign in button")
     public void click_the_sign_in_button() {
+
 
         loginpage.signInButtonTab.click();
     }

@@ -33,7 +33,7 @@ public class LoginPage {
 
 
     @FindBy(xpath = "(//span[text()='Sign in'])[2]")
-    public WebElement singInText;
+    public WebElement signInText;
 
     @FindBy(partialLinkText = "My Operations")
     public WebElement myOperations;
@@ -44,14 +44,16 @@ public class LoginPage {
     @FindBy(id = "register-title")
     public WebElement registerTitleText;
 
+
+    @FindBy(xpath = "(//button[@type='button'])[5]")
+    public WebElement loginPageCancelButton;
+
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement userNamePasswordWrongMessage;
 
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement signInButton;
 
-    @FindBy(xpath = "(//button[@type='button'])[5]")
-    public WebElement loginPageCancelButton;
 
 
 
